@@ -33,7 +33,7 @@
     <Folder Include="Messages\Responses\CSVFile\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9" />
     <PackageReference Include="Serilog.Extensions.Logging.File" Version="1.1.0" />
     <PackageReference Include="SkiaSharp" Version="1.59.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="3.0.0" />
