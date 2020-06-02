@@ -1,0 +1,44 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand"> 
+            <img [routerLink]="['/dashboard']" src="assets/Allogator.png"  alt="Allogator" style="width:82px;height:30px;"/>
+        </a>
+
+        <!-- Menu Items -->
+        <div>
+            <ul class="nav navbar-nav">
+                <li [routerLinkActive]="['link-active']"><a [routerLink]="['/dashboard']">Dashboard</a></li>
+                <!-- drop down menu -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pods<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li [routerLinkActive]="['link-active']">
+                            <a [routerLink]="['/poda']">POD A</a>
+                        </li>
+                        <li [routerLinkActive]="['link-active']">
+                            <a [routerLink]="['/podb']">POD B</a>
+                        </li>
+                        <li [routerLinkActive]="['link-active']">
+                            <a [routerLink]="['/podc']">POD C</a>
+                        </li>
+                        <li [routerLinkActive]="['link-active']">
+                            <a [routerLink]="['/podd']">POD D</a>
+                        </li>
+                    </ul>
+                </li>
+                <li [routerLinkActive]="['link-active']"><a [routerLink]="['/seniorstaff']">Senior Staff</a></li>
+                <li [routerLinkActive]="['link-active']"><a [routerLink]="['/nurseprofile']">Profiles</a></li>
+                <li [routerLinkActive]="['link-active']"><a [routerLink]="['/sidebar']">Edit Allocation</a></li>
+
+                <li [routerLinkActive]="['link-active']"><a [routerLink]="['/allocationhistory']">History</a></li>
+
+            </ul>
+            <!--right align -->
+            <ul class="nav navbar-nav navbar-right">
+                <li [routerLinkActive]="['link-active']"><a [routerLink]="['/settings']">Settings</a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>

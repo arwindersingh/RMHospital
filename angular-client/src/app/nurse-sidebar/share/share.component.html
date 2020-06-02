@@ -1,0 +1,27 @@
+<div class="panel" [ngClass]="{'closed':closed}">
+	<!--open bed-->
+	<div  *ngIf="!staff.staff_name && !closed" class="panel-heading"  style="background-color: grey;color: white">
+		<p>{{getTitle()}}</p>
+	</div>
+
+	<!--open bed and has assigned staff-->
+	<div  *ngIf="staff.staff_name" class="panel-heading" [ngStyle]="css" >
+		<p>{{getTitle()}}</p>
+	</div>
+	
+	<!--panel body-->
+	<div  class="panel-body" (mouseup) = "clickPanelBody()">
+			<span style="font-size: 20px;" *ngIf="(staff.alias) else staffname" >
+				   {{staff.alias}}
+			   </span>
+			   <ng-template #staffname><span>{{staff.staff_name}}</span></ng-template>
+			   <div>
+				   {{staff.notes?.slice(0,1)[0]?.contents}}
+			   </div>
+		   </div>
+	   
+	   </div>
+
+
+
+

@@ -1,0 +1,147 @@
+.inputText, button {
+    font-size: inherit;
+    background-color: inherit;
+    width: 80%;
+    padding: 0.3em 0.4em;
+    margin: 0.1em 0.2em;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    border: 1px solid #f90;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-align: center;
+    }
+.inputText {
+    margin-right: 0;
+    background-color: inherit;
+    border-radius: 0.6em 0.6em 0.6em 0.6em;
+}
+button {
+    background-color: Thistle;
+    margin-left: 0;
+    border-radius: 0.6em 0.6em 0.6em 0.6em;
+}
+label {
+    padding-top:3px;
+}
+.radio {
+    float: left;
+    text-align: center;
+    padding-top: 0.1em;
+    border: 1px;
+}
+.radiobutton{
+    display: none;
+}
+
+
+.leftContainer{
+    height: 100%;
+    width: 30%;
+    float: left;
+    border-right: 1px solid grey;
+    display: inline-block;
+    position: relative;
+    
+}
+
+.rightContainer{
+    height: 100%;
+    width: 70%;
+    display: inline-block;
+    position:relative;
+}
+
+.imgPos{
+    margin-left: -40px;
+    margin-top: -40px;
+    top:50%;
+    left: 50%;
+    position: absolute;
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.staff{
+    max-width: 30%;
+    top:50%;
+    position: absolute;
+}
+
+/* style of the profession in
+central area e.g Team leader,
+Registar, Pod ca */
+.profession{
+    top:50%;
+    width: 100%;
+    position: absolute;
+}
+
+/* style of bed number e.g
+A1, A2 */
+.bed_numb{
+    top:50%;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+}
+
+/* style of the nurse name assigned
+to the central area */
+.staff_name{
+    top:80%;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+
+}
+
+/* style of the nurse name assigned
+to the bed area */
+.nurse_name{
+    top:80%;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+}
+
+.nurseProfile{
+    width:201px;
+    height:115px;
+    background:#ffea60;
+    top:0px;
+    position:absolute;
+    opacity: 0;  
+    display: block;
+    font-size: 12px;
+    transition: 0.3s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    border-radius: 5px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    text-align: left;
+}  
+.cent:hover .nurseProfile{  
+    /*color: #f4d142; */
+    opacity: 1;  
+} 
+
+.profileText{
+    padding-left: 10px;
+}
+
+.notes{
+/*    border:5px solid red;
+*/    
+    position: relative;
+    top: 96px;
+    font-family: sans-serif;
+    font-size: 10px;
+}

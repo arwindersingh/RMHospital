@@ -1,0 +1,254 @@
+.seniorside{
+    width: 14.2%;
+    margin: 0.4%;
+    float: left;
+}
+
+.central-layout{
+    width: 85%;
+    height: 94%;
+    padding: 0.2%;
+    padding-left: 0;
+    float: left;
+    text-align: center;
+}
+
+.searchBar {
+    float: left;
+    width: 100%;
+    height: 7%;
+    text-align: left;
+}
+
+select {
+    margin-left:1.7%;
+    height:35px;
+    width:80px; 
+    border-radius: 0.2em 0.2em 0.2em 0.2em;
+    border-color:silver;
+    border-width: 0.5px;
+}
+
+button {
+    margin-left:1.7%;
+    height:32px;
+    width:80px; 
+    border-radius: 0.2em 0.2em 0.2em 0.2em;
+    background-color: cornflowerblue;
+}
+
+.poda, .podb, .podc, .podd{
+    float: left;
+    border-style: solid;
+    border-width: 1px;
+    width: 48%;
+    height:50%;
+    margin-bottom: 0.8%;  
+    margin-top: 0.5%;
+    text-align: center;
+    list-style-type: none;
+    padding-bottom:0.01%;
+}
+
+.podb, .poda{
+    margin-left: 0.5%;
+}
+
+.podc, .podd{
+    margin-left: 1.7%;
+}
+
+.podd {
+    background: #89ccfb;
+}
+
+.poda {
+    background: #fffba1;
+}
+
+.podb { 
+    background: #f8a770;
+}
+
+.podc {
+    background: #98f786;
+}
+
+.poda-layout{
+    width: 96%;
+    height: 98%;
+    margin-top: 0.7%;
+    margin-bottom: 0.3%;
+    text-align: center;
+    font-size-adjust: auto;
+}
+.podb-layout, .podc-layout, .podd-layout{
+    width: 96%;
+    height: 98%;
+    margin-top: 0.7%;
+    margin-bottom: 0.3%;
+    text-align: center;
+    font-size-adjust: auto;
+}
+
+.podtitle{
+    height: 15%;
+    width: 100%;
+    float: left;
+}
+
+.podtitle label{
+    font-size: 24px;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+}
+
+.sectionA{
+    width: 100%;
+    margin-left: 2%;
+    height:20%;
+    text-align: center;  
+}
+
+.sectionA div{
+    float: left;
+    width: 25%;
+    height: 100%;
+    list-style-type: none;
+}
+
+.sectionB{
+    width: 100%;
+    margin-left: 2%;
+    height:80%;
+    text-align: center;
+}
+
+.sectionB1, .sectionB2{
+    float: left;
+    width: 25%;
+    height: 100%;
+}
+
+.sectionB1 div, .sectionB2 div{
+    float: left;
+    height: 25%;
+    width: 100%;
+    padding-bottom: 0.1%;
+    list-style-type: none; 
+}
+
+.leader-section{
+    font-weight: bold;
+    float: left;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+}
+
+.leaderA{
+    text-align: center;
+    margin-left: 3%;
+    margin-top: 3%;
+    width:45%; 
+    height: 82%;
+    float: left;
+}
+
+.leaderB{
+    text-align: center;
+    margin-right: 3%;
+    margin-top: 3%;
+    width:45%;
+    height: 82%;
+    float: left;
+}
+
+.leaderA div,.leaderB div{
+    padding-top: 3%;
+    padding-bottom: 5%;
+    height: 33.33%;
+}
+
+.sectionA_2{
+    width: 100%;
+    margin-left: 2%;
+    height:25%;
+    text-align: center;
+}
+
+.sectionB_2{
+    width: 100%;
+    margin-left: 2%;
+    height:75%;
+    text-align: center;
+}
+
+.sectionA_2 div{
+    float: left;
+    width: 25%;
+    height: 100%;
+    padding-top: 0.5%;
+    text-align: center;
+    list-style-type: none;
+}
+
+.sectionB1_2{
+    float: left;
+    width: 25%;
+    height:100%;
+}
+
+.sectionB2_2{
+    float: left;
+    width: 25%;
+    height:100%;
+}
+
+.sectionB1_2 div,.sectionB2_2 div{
+    float: left;
+    height: 33.4%;
+    width: 100%;
+    padding-top: 2%;
+    text-align: center;
+    list-style-type: none;  
+}
+
+.leader-section_2{
+    font-weight: bold;
+    float: left;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+}
+
+.leaderA_2{
+    text-align: center;
+    margin-left: 5%;
+    margin-top: 0.5%;
+    width:45%;
+    height: 85%;
+    float: left;
+}
+
+.leaderB_2{
+    text-align: center;
+    margin-right: 5%;
+    margin-top: 0.5%;
+    width:45%;
+    height: 85%;
+    float: left;
+}
+
+.leaderA_2 div,.leaderB_2 div{
+    padding-top: 2%;
+    padding-bottom: 4%;
+    height: 33.33%;
+}
+
+
+
+
+
+

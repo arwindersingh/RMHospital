@@ -1,0 +1,80 @@
+[
+  {
+    "id" : "1",
+    "name": "1",
+    "staff_type": "senior",
+    "skills": [],
+    "last_double": null,
+    "photo": "photoid"
+  },
+  { 
+    "id" : "2",
+    "name": "2",
+    "staff_type": "cnm",
+    "skills": [
+      "pulmonary",
+      "neuro"
+    ],
+    "last_double": "2017-06-11",
+    "photo": "photoid"
+  },
+  {
+    "id" : "3",
+    "name": "3",
+    "staff_type": "cnm",
+    "skills": [
+      "pulmonary",
+      "transport"
+    ],
+    "last_double": "2017-06-11",
+    "photo": "photoid"
+  },
+  {
+    "id" : "4",
+    "name": "4",
+    "staff_type": "cnm",
+    "skills": [
+      "pulmonary",
+      "neuro",
+      "transport"
+    ],
+    "last_double": "2017-06-11",
+    "photo": "photoid"
+  },
+  {
+    "id" : "5",
+    "name": "5",
+    "staff_type": "cnm",
+    "skills": [
+      "pulmonary",
+      "neuro",
+      "transport"
+    ],
+    "last_double": "2017-06-11",
+    "photo": "photoid"
+  },
+  {
+    "id" : "6",
+    "name": "6",
+    "staff_type": "student",
+    "skills": [
+      "pulmonary",
+      "neuro",
+      "transport"
+    ],
+    "last_double": "2017-06-11",
+    "photo": "photoid"
+  },
+  {
+    "id" : "7",
+    "name": "7",
+    "staff_type": "cnm",
+    "skills": [
+      "pulmonary",
+      "neuro",
+      "transport"
+    ],
+    "last_double": "2017-06-11",
+    "photo": "photoid"
+  }
+]

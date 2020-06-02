@@ -1,0 +1,9 @@
+{
+    "status" : "success",
+    "pods" : [
+        {"name" : "POD1", "id" : 1},
+        {"name" : "POD2", "id" : 2},
+        {"name" : "POD3", "id" : 3},
+        {"name" : "POD4", "id" : 4}
+    ]
+}

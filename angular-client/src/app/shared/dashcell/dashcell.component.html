@@ -1,0 +1,9 @@
+<div class="panel" [ngClass]="{'panel-default': shifttype == 'closed', 'panel-danger': shifttype == '12', 'panel-primary': shifttype == '8'}">
+  <div class="panel-heading">{{formatString(title)}}</div>
+  <div class="panel-body" name='title'>
+    <p>
+        {{firstNameLastInitial(name)}} <br>
+        {{note}}
+    </p>
+  </div>
+</div>

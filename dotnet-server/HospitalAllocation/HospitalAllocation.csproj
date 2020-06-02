@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssetTargetFallback>$(AssetTargetFallback);dotnet5.6;portable-net45+win8</AssetTargetFallback>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+    <Folder Include="Providers\Allocation\Interface\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Data\Allocation\" />
+    <Folder Include="Data\Allocation\Positions\" />
+    <Folder Include="Data\Allocation\StaffGroups\" />
+    <Folder Include="Providers\Allocation\Memory\" />
+    <Folder Include="Providers\Allocation\Memory\StaffGroups\" />
+    <Folder Include="Messages\Responses\Allocation\" />
+    <Folder Include="Providers\Allocation\Interface\StaffGroups\" />
+    <Folder Include="Providers\Allocation\Interface\Positions\" />
+    <Folder Include="Providers\Allocation\Memory\Positions\" />
+    <Folder Include="Messages\Requests\" />
+    <Folder Include="Messages\Requests\Allocation\" />
+    <Folder Include="Providers\Image\Interface\" />
+    <Folder Include="Messages\Responses\Image\" />
+    <Folder Include="Messages\Responses\Handover\" />
+    <Folder Include="Data\Handover\" />
+    <Folder Include="Providers\Handover\Database\" />
+    <Folder Include="Providers\Handover\Inteface\" />
+    <Folder Include="Providers\Handover\" />
+    <Folder Include="Providers\CSVFile\Interface\" />
+    <Folder Include="Messages\Responses\CSVFile\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Serilog.Extensions.Logging.File" Version="1.1.0" />
+    <PackageReference Include="SkiaSharp" Version="1.59.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="3.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Providers\Handover\Inteface\EmptyInterface.cs" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,270 @@
+<table class="seniorside table table-condensed" style="table-layout:fixed;">
+    <tbody *ngFor="let staff of
+        [{title: 'AC', name: 'access_coordinator'},
+        {title: 'CNM', name: 'cnm'},
+        {title: 'CNC', name: 'cnc'},
+        {title: 'MERN', name: 'mern'},
+        {title: 'Educator', name: 'educator'},
+        {title: 'Resource', name: 'resource'},
+        {title: 'Tech', name: 'tech'},
+        {title: 'CA Supp', name: 'ca_support'},
+        {title: 'Wd Cons', name: 'ward_consultant'},
+        {title: 'Int Reg', name: 'internal'},
+        {title: 'Ext Reg', name: 'external'},
+        {title: 'Trns Reg', name: 'transport'},
+        {title: 'Donation', name: 'donation'}]">
+        <tr>
+            <td class="warning" style="width: 25%; border-right: 1px solid #ddd;">{{staff.title}}</td>
+            <th style="font-size: 16px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;">{{expandStaffList(staff.name)[0]}}</th>
+        </tr>
+        <tr *ngFor="let name of expandStaffList(staff.name).slice(1)">
+            <td class="warning" style="width: 25%; border-right: 1px solid #ddd;"></td>
+            <th style="font-size: 16px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;">{{name}}</th>
+        </tr>
+    </tbody>
+</table>
+<div class="central-layout">
+    <div class="searchBar">
+    <form #myForm="ngForm" novalidate style="float:left;width:200px;margin-left:1.7%; ">
+    <my-date-picker name="mydate"
+        [options]="myDatePickerOptions"
+        [selDate]="selDate"
+        (dateChanged)="onDateChanged($event)" required>
+    </my-date-picker>
+    </form>
+    <select [(ngModel)]="time" >
+    <option [value]="t.id" *ngFor="let t of timeList">{{t.name}}</option>
+    </select>
+    <button (click)="searchHistory()">Search </button>
+    </div>
+    <div class="podd">
+        <div class="podd-layout">
+            <div class="sectionA">
+                <div *ngFor="let bednum of [3,2,1]">
+                    <dashcell
+                        [name]="podd?.beds[bednum-1].alias"
+                        [title]="'D' + bednum"
+                        [shifttype]="podd?.beds[bednum-1].shift_type">
+                    </dashcell>
+                </div>
+                <!-- An empty room -->
+                <div style="background:silver">
+                </div>
+            </div>
+            <div class="sectionB">
+                <aside class="sectionB1">
+                    <div *ngFor="let bednum of [4,5,6,7]">
+                        <dashcell
+                            [name]="podd?.beds[bednum-1].alias"
+                            [title]="'D' + bednum"
+                            [shifttype]="podd?.beds[bednum-1].shift_type">
+                        </dashcell>
+                    </div>
+                </aside>
+                <div class="leader-section">
+                    <div class="leaderA">
+                        <div  *ngFor="let name of ['consultant','registrar','pod_ca']">
+                            <dashcell *ngIf="podd"
+                                [name]="podd[name].alias"
+                                [title]="name"
+                                [shifttype]="podd[name].shift_type">
+                            </dashcell>
+                        </div>
+                    </div>
+                    <div class="leaderB">
+                        <div  *ngFor="let name of ['team_leader','resident','ca_cleaner']">
+                            <dashcell *ngIf="podd"
+                                [name]="podd[name].alias"
+                                [title]="name"
+                                [shifttype]="podd[name].shift_type">
+                            </dashcell>
+                        </div>
+                    </div>
+                    <div class="podtitle">
+                        <label for="podd">Pod D</label>
+                    </div>
+                </div>
+                <aside class="sectionB2">
+                    <!-- An empty room -->
+                    <div style="background:silver">
+                    </div>
+                    <div *ngFor="let bednum of [10,9,8]">
+                        <dashcell
+                            [name]="podd?.beds[bednum-1].alias"
+                            [title]="'D' + bednum"
+                            [shifttype]="podd?.beds[bednum-1].shift_type">
+                        </dashcell>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+    <div class="poda">
+        <div class="poda-layout">
+            <div class="sectionA">
+                 <div *ngFor="let bednum of [1,2,3,4]">
+                    <dashcell
+                        [name]="poda?.beds[bednum-1].alias"
+                        [title]="'A' + bednum"
+                        [shifttype]="poda?.beds[bednum-1].shift_type">
+                    </dashcell>
+                </div>
+            </div>
+            <div class="sectionB">
+                <aside  class="sectionB1">
+                    <div *ngFor="let bednum of [12,11,10,9]">
+                        <dashcell
+                            [name]="poda?.beds[bednum-1].alias"
+                            [title]="'A' + bednum"
+                            [shifttype]="poda?.beds[bednum-1].shift_type">
+                        </dashcell>
+                    </div>
+                </aside>
+                <div class="leader-section">
+                    <div class="leaderA">
+                        <div  *ngFor="let name of ['consultant','registrar','pod_ca']">
+                            <dashcell *ngIf="poda"
+                                [name]="poda[name].alias"
+                                [title]="name"
+                                [shifttype]="poda[name].shift_type">
+                            </dashcell>
+                        </div>
+                    </div>
+                    <div class="leaderB">
+                        <div  *ngFor="let name of ['team_leader','resident','ca_cleaner']">
+                            <dashcell *ngIf="poda"
+                                [name]="poda[name].alias"
+                                [title]="name"
+                                [shifttype]="poda[name].shift_type">
+                            </dashcell>
+                        </div>
+                    </div>
+                    <div class="podtitle">
+                        <label for="poda">Pod A</label>
+                    </div>
+                </div>
+                <aside class="sectionB2">
+                    <div *ngFor="let bednum of [5,6,7,8]">
+                        <dashcell
+                            [name]="poda?.beds[bednum-1].alias"
+                            [title]="'A' + bednum"
+                            [shifttype]="poda?.beds[bednum-1].shift_type">
+                        </dashcell>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+    <div class="podc">
+        <div class="podc-layout">
+            <div class="sectionB_2">
+                <aside class="sectionB1_2">
+                    <div *ngFor="let bednum of [1,2,3]">
+                        <dashcell
+                            [name]="podc?.beds[bednum-1].alias"
+                            [title]="'C' + bednum"
+                            [shifttype]="podc?.beds[bednum-1].shift_type">
+                        </dashcell>
+                    </div>
+                </aside>
+                <div class="leader-section_2">
+                    <div class="leaderA_2">
+                        <div  *ngFor="let name of ['consultant','registrar','pod_ca']">
+                            <dashcell *ngIf="podc"
+                                [name]="podc[name].alias"
+                                [title]="name"
+                                [shifttype]="podc[name].shift_type">
+                            </dashcell>
+                        </div>
+                    </div>
+                    <div class="leaderB_2">
+                        <div  *ngFor="let name of ['team_leader','resident','ca_cleaner']">
+                            <dashcell *ngIf="podc"
+                                [name]="podc[name].alias"
+                                [title]="name"
+                                [shifttype]="podc[name].shift_type">
+                            </dashcell>
+                        </div>
+                    </div>
+                    <div class="podtitle">
+                        <label for="podc">Pod C</label>
+                    </div>
+                </div>
+                <aside class="sectionB2_2">
+                    <div *ngFor="let bednum of [10,9,8]">
+                        <dashcell
+                            [name]="podc?.beds[bednum-1].alias"
+                            [title]="'C' + bednum"
+                            [shifttype]="podc?.beds[bednum-1].shift_type">
+                        </dashcell>
+                    </div>
+                </aside>
+            </div>
+            <div class="sectionA_2">
+                <div *ngFor="let bednum of [4,5,6,7]">
+                    <dashcell
+                        [name]="podc?.beds[bednum-1].alias"
+                        [title]="'C' + bednum"
+                        [shifttype]="podc?.beds[bednum-1].shift_type">
+                    </dashcell>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="podb">
+        <div class="podb-layout">
+            <div class="sectionB_2">
+                <aside class="sectionB1_2">
+                    <div *ngFor="let bednum of [10,9,8]">
+                        <dashcell
+                            [name]="podb?.beds[bednum-1].alias"
+                            [title]="'B' + bednum"
+                            [shifttype]="podb?.beds[bednum-1].shift_type">
+                        </dashcell>
+                    </div>
+                </aside>
+                <div class="leader-section_2">
+                    <div class="leaderA_2">
+                        <div  *ngFor="let name of ['consultant','registrar','pod_ca']">
+                            <dashcell *ngIf="podb"
+                                [name]="podb[name].alias"
+                                [title]="name"
+                                [shifttype]="podb[name].shift_type">
+                            </dashcell>
+                        </div>
+                    </div>
+                    <div class="leaderB_2">
+                        <div  *ngFor="let name of ['team_leader','resident','ca_cleaner']">
+                            <dashcell *ngIf="podb"
+                                [name]="podb[name].alias"
+                                [title]="name"
+                                [shifttype]="podb[name].shift_type">
+                            </dashcell>
+                        </div>
+                    </div>
+                    <div class="podtitle">
+                        <label for="podb">Pod B</label>
+                    </div>
+                </div>
+                <aside class="sectionB2_2">
+                    <div *ngFor="let bednum of [1,2,3]">
+                        <dashcell
+                            [name]="podb?.beds[bednum-1].alias"
+                            [title]="'B' + bednum"
+                            [shifttype]="podb?.beds[bednum-1].shift_type">
+                        </dashcell>
+                    </div>
+                </aside>
+            </div>
+            <div class="sectionA_2">
+                <div *ngFor="let bednum of [7,6,5,4]">
+                    <dashcell
+                        [name]="podb?.beds[bednum-1].alias"
+                        [title]="'B' + bednum"
+                        [shifttype]="podb?.beds[bednum-1].shift_type">
+                    </dashcell>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

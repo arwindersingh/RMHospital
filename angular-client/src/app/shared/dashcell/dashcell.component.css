@@ -1,0 +1,30 @@
+.panel {
+    height: 100%;
+    margin: 1%;
+}
+
+.panel-heading {
+    padding: 0px;
+    height: 25%;
+}
+
+.panel-body {
+    padding: 5px;
+    height: 75%;
+    overflow: hidden;
+    font-size: 16px;
+}
+
+.panel-default{
+	opacity: 0.5;
+}
+
+.panel-danger {
+    border-color: maroon;
+}
+
+.panel-danger>.panel-heading{
+	color: white;
+    background-color: maroon;
+    border-color: maroon;
+}

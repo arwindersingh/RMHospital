@@ -1,0 +1,36 @@
+<div *ngIf="staff" style="height: 75%;">
+  <div class="panel">
+    <div class="panel-heading" [ngStyle]="css" style="color: white">
+      <p>Pod{{position.substr(0,1)}}   {{position.substring(1)}}</p>
+    </div>
+    <div class="panel-body">
+      <div class="col-md-3" style="height:70%">
+        <p>Name:</p>
+        <p *ngIf="staff?.notes?.slice(0,1)[0]">Note:</p>
+      </div>
+      <div class="col-md-6" style="height:70%">
+        <input class="text-input" type="text" [readonly]="staff.id" [(ngModel)]="staff.staff_name">
+        <input *ngIf="staff?.notes?.slice(0,1)[0]" class="text-input" type="text" [(ngModel)]="staff.notes[0].contents" maxlength="15">
+      </div>
+      <div class="col-md-3" style="height:70%">
+        <button class="btn btn-sm btn-danger" style="margin:2%" (click) = "deleteStaff()">Remove</button>
+        <button *ngIf="staff?.notes?.slice(0,1)[0]" class="btn btn-sm btn-primary" style="margin:2%" (click)="saveNote()">Save Note</button>
+      </div>
+      <div class="col-md-4">
+        <b style="display: inline;">8 hour</b>
+        <input style="display: inline;" class="radio" type="radio" name="shift_type" value="8" [(ngModel)]="staff.shift_type">
+      </div>
+      <div class="col-md-4">
+        <b style="display: inline;">12 hour</b>
+        <input  style="display: inline;" class="radio" type="radio" name="shift_type" value="12" [(ngModel)]="staff.shift_type">
+      </div>
+        <div class="col-md-4">
+        <b style="display: inline;">Empty</b>
+        <input  style="display: inline;" class="radio" type="radio" name="shift_type" value="closed" [(ngModel)]="staff.shift_type">
+      </div>
+      <br>
+    </div>
+  </div>
+</div>
+
+

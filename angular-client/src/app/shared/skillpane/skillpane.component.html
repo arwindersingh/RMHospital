@@ -1,0 +1,53 @@
+<p>Total list of all skills available to Nurses</p>
+<p><b>Note:</b> changing skills already assigned to nurses 
+  changes their associated skills globally</p>
+<p><b>Note:</b> You cannot delete a skill which is already associated with 
+  at least one nurse. Go to Profiles to search and remove it there first</p>
+<table class="table table-hover" style="overflow:scroll">
+  <thead>
+    <tr>
+      <th>Skill Name</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td (click)="edit(skillDict[-1].skill.id)" style="width:66%">
+        <input class="form-control" type="text" [(ngModel)]="skillDict[-1].skill.name"
+          [readonly]="skillDict[-1].readonly ? true : null"
+          id="{{'input' + skillDict[-1].skill.id}}">
+      </td>
+      <td>
+        <button *ngIf="skillDict[-1].readonly" type="button" class="btn btn-primary"
+          (click)="edit(skillDict[-1].skill.id)">
+          New
+        </button>
+        <button *ngIf="!skillDict[-1].readonly" type="button" class="btn btn-success"
+          (click)="newSkill()">
+          Save New
+        </button>
+      </td>
+    </tr>
+    <tr *ngFor="let s of dictToArray(skillDict)">
+      <td (click)="edit(s.skill.id)">
+        <input class="form-control" type="text" [(ngModel)]="s.skill.name"
+          [readonly]="s.readonly ? true : null"
+          id="{{'input' + s.skill.id}}">
+      </td>
+      <td>
+        <button *ngIf="s.readonly" type="button" class="btn btn-info"
+          (click)="edit(s.skill.id)">
+          Edit
+        </button>
+        <button *ngIf="!s.readonly" type="button" class="btn btn-success" 
+          (click)="save(s.skill.id)">
+          Save
+        </button>
+        <button *ngIf="!s.readonly" type="button" class="btn btn-danger" 
+          (click)="delete(s.skill.id)">
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

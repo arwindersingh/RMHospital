@@ -1,0 +1,397 @@
+<!-- show the edit window start-->
+<script type="text/javascript">
+$(document).ready(function() {
+$("#editModal").on('show.bs.modal', function(event) {
+  // Button triggered the modal
+  var button = $(event.relatedTarget);
+  // Get value from attributes
+  var titleData = button.data('title');
+  $(this).find('.modal-title').text(titleData + ' Form');
+});
+});
+</script>
+<!-- show the edit window end-->
+
+<!-- show the create window start-->
+<script type="text/javascript">
+$(document).ready(function() {
+$("#createModal").on('show.bs.modal', function(event) {
+  // Button triggered the modal
+  var button = $(event.relatedTarget);
+  // Get value from attributes
+  var titleData = button.data('title');
+  $(this).find('.modal-title').text(titleData + ' Form');
+});
+});
+</script>
+<!-- show the create window end-->
+
+<div class="container">
+<div class="row">
+  <div class="span12">
+    <!--search and filter start-->
+    <div class="row">
+      <!--search start-->
+      <div class="col-sm-2">
+        <label >Staff Name</label>
+        <input class="form-control" type="text" [(ngModel)]="search" />
+      </div>
+      <!--search end-->
+      <!--filter start-->
+      <div class="col-sm-8" style="margin-top:15px;">
+        <div id="filter">
+
+          <!--quick filter start-->
+          <div class="singleFilter">
+            <label class="filterLabel" *ngIf="!moreFilter" (click)="showMoreFilter()" style="float:left;margin-left: 40%;cursor: pointer;">Filters:<span class="caret"></span></label>
+            <label class="filterLabel" *ngIf="moreFilter" (click)="showMoreFilter()" style="float:left;margin-left: 40%;cursor: pointer;">Filters:<span class="caret" style="border-top: 0;border-bottom: 4px solid;"></span></label>
+          </div>
+           <!--quick filter end-->
+
+            <!--more filter start-->
+          <div *ngIf="moreFilter">
+            <br>
+            <div class="singleFilter">
+              <label class="filterLabel">Skills:</label>
+              <div class="filterContainer">
+                <div class="checklist" *ngFor="let s of skillFilter" style="display: inline;">
+                  <input type="checkbox" class="checkbox" [checked]="s.select" (change)="s.select = !s.select">{{s.name}}
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="singleFilter">
+              <label class="filterLabel">Type:</label>
+              <div class="filterContainer">
+                <div class="checklist" *ngFor="let s of typeFilter">
+                  <input type="checkbox" class="checkbox" [checked]="s.select" (change)="s.select = !s.select">{{s.name}}
+                </div>
+              </div>
+            </div>
+            <br>
+            <div>
+              <div class="singleFilter">
+                <label class="filterLabel">Last double:</label>
+                <div style="width:200px;float:left;">
+                  <div style="display:inline;width: 29px;">
+                    <my-date-picker style="width: 35%; right: 0%" name="mydate" [options]="myDatePickerOptions" [(ngModel)]="model_0" required></my-date-picker>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br>
+          </div>
+          <!--more filter end-->
+        </div>
+      </div>
+      <!--filter end-->
+      <div class="col-sm-2" style="margin-top: 20px;">
+        <button (click)="subFilter()" type="submit" class="btn" style="float: left; margin-top:5px; background-color:#99BBFF">Search</button>
+        <button *ngIf="!editEnabled" type="button" class="btn" style="margin-left: 15px; float: left; margin-top:5px" (click)="editNurse('newNurseButton')" data-title="Edit">New</button>
+        <button *ngIf="editEnabled" type="button" class="btn" id="newNurseButton" style="margin-left: 15px; float: left; margin-top:5px;background-color:#99BBFF" data-toggle="modal" data-target="#createModal" data-title="Create" (click)="onAdd()">New</button>
+      </div>
+    </div>
+    <!--search and filter end-->
+    <!--create start-->
+    <!--create end-->
+    <!--profile list start-->
+    <div class="row">
+      <div class="span12" id="list">
+        <div *ngIf="nurses">
+          <div *ngFor="let nurse of (nursesToArray(nurses)|searchprofilePipe:search); let i=index;">
+            <div class="col-md-4">
+              <div class="business-card" style="height: 150px" (click)="lgModal.show()" (click)="selectNurse(nurse)">
+                <div class="media">
+                  <div class="media-left" style="float:left;">
+                    <img class="media-object img-circle profile-img" src="{{getNurseImageUrl(nurse)}}">
+                  </div>
+                  <div class="nurse-body">
+                    <h2 class="nurse-head">{{nurse.staff_name}}</h2>
+                    <div class="job" style="height: 25px;">{{nurse?.staff_type}}</div>
+                    <div class="job">{{skillsToStr(nurse?.skills)}}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--profile list send-->
+  </div>
+</div>
+<!--pop out nurse detail window start-->
+<div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <!--show profile start-->
+        <div *ngIf="selectednurse && !edit">
+          <div class="panel panel-info" style="margin: 0px;">
+            <div class="panel-body">
+              <div class="row" style="padding: 3%">
+                <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="{{getNurseImageUrl(selectednurse)}}" class="img-circle img-responsive" style="height: 60%;width: 60%"> </div>
+                <div class=" col-md-9 col-lg-9 ">
+                  <table class="table table-user-information">
+                    <tbody>
+                      <tr>
+                        <td><p style="width: 150px;">Staff name<span style="color:red">*</span>:</p></td>
+                        <td>{{selectednurse.staff_name}}</td>
+                      </tr>
+                      <tr>
+                        <td><p style="width: 150px;">Alias<span style="color:red">*</span>:</p></td>
+                        <td>{{selectednurse.alias}}</td>
+                      </tr>
+                      <tr>
+                        <td>RosterOn ID:</td>
+                        <td>{{selectednurse.rosteron_id}}</td>
+                      </tr>
+                      <tr>
+                        <td>Staff type<span style="color:red">*</span>:</td>
+                        <td>{{selectednurse.staff_type}}</td>
+                      </tr>
+                      <tr>
+                        <td>Skills:</td>
+                        <td>{{selectednurse.skills}}</td>
+                      </tr>
+                      <tr>
+                        <td>Last Double:</td>
+                        <td>{{selectednurse.last_double}}</td>
+                      </tr>
+                      <tr>
+                        <td popover="Recent double is all doubles in the last 90 days" triggers="mouseenter:mouseleave">Recent Doubles:</td>
+                        <td>{{selectedRecentDouble}}</td>
+                      </tr>
+                      <tr>
+                        <td>Dashboard Note:</td>
+                        <td style="word-break:break-all; width:100%;">{{selectedNotes[0].contents}}</td>
+                      </tr>
+                      <tr>
+                        <td>Private Note:</td>
+                        <td style="word-break:break-all; width:100%;">{{selectedNotes[1].contents}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <button *ngIf="!editEnabled" type="button" class="btn btn-default" (click)="editNurse('editButton')" data-title="Edit">Edit Profile</button>
+                  <button *ngIf="editEnabled" id="editButton" type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" data-title="Edit">Edit Profile</button>
+                  <button type="button" class="btn btn-danger" data-toggle="modal" data-title="Edit" (click)="deleteNurse()" (click)="lgModal.hide()">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--show profile end-->
+      </div>
+    </div>
+  </div>
+</div>
+<!--pop out nurse detail window end-->
+<!--Edit window start-->
+<div id="editModal" class="modal fade">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title">Edit Staff Profile</h4>
+      </div>
+      <div class="modal-body">
+        <div class="panel-body" *ngIf="selectednurse">
+          <div class="row" style="padding: 3%">
+            <div class="col-md-3 col-lg-3 " align="center">
+              <img alt="User Pic" src="{{getNurseImageUrl(selectednurse)}}" class="img-circle img-responsive" style="height: 60%;width: 60%">
+              Upload new photo
+              <input #editPhotoUpload type="file" (change)="onEditImageAdd($event)" accept=".png, .jpg, .jpeg"  style="width: 100%">
+            </div>
+            <div class=" col-md-9 col-lg-9 ">
+              <!--form start-->
+              <form role="form" #f="ngForm">
+                <div class="createPanel">
+                  <label for="nurse-name" class="createLabel">First name<span style="color:red">*</span>:</label>
+                  <input (keyup)="updateAliasEdit($event)" type="text" ngModel name="firstName" class="form-control" id="first-name" [(ngModel)]="editnurse.first_name" style="width:80%;float:left;">
+                </div>
+                <div class="createPanel">
+                  <label for="nurse-name" class="createLabel">Last name<span style="color:red">*</span>:</label>
+                  <input type="text" ngModel name="lastName" class="form-control" id="last-name" [(ngModel)]="editnurse.last_name" style="width:80%;float:left;">
+                </div>
+                <div class="createPanel">
+                  <label for="nurse-name" class="createLabel">Alias<span style="color:red">*</span>:</label>
+                  <input type="text" ngModel name="alias" class="form-control" id="alias-edit" [(ngModel)]="editnurse.alias" style="width:80%;float:left;">
+                </div>
+                <div class="createPanel">
+                  <label for="nurse-name" class="createLabel">RosterOn ID:</label>
+                  <input type="text" ngModel name="rosteron_id" class="form-control" id="rosteron-id" [(ngModel)]="editnurse.rosteron_id" style="width:80%;float:left;">
+                </div>
+                <div class="createPanel">
+                  <label for="staff-type" class="createLabel">Staff type<span style="color:red">*</span>:</label>
+                  <div>
+                    <select name="type" [(ngModel)]="editnurse.staff_type" class="form-control" style="width:300px;float:left;">
+                      <option *ngFor="let t of nurseTypes" [ngValue]="t.name">{{t.name}}</option>
+                    </select>
+                      <button type="button" class="btn btn-info" style="float:right"
+                        data-toggle="modal" data-target="#typeModal">
+                        Edit Types
+                      </button>
+                  </div>
+
+                </div>
+                  <div class="createPanel">
+                    <label for="skills" class="createLabel">Skills:</label>
+                  <br>
+                  <div class="filterContainer">
+                    <div class="checklist">
+                      <label *ngFor="let s of skillTypes let idx = index"  style="float:left;margin-left:15px;font-weight:normal;">
+                        {{s.name}}
+                        <input class="checkbox" [(ngModel)]="editnurse_skill_check[idx].check" name={{s.name}} value={{s.name}} type="checkbox" id="inlineCheckbox1">
+                      </label>
+                    </div>
+                    <button type="button" class="btn btn-info" style="float:right"
+                        data-toggle="modal" data-target="#skillModal">
+                        Edit Skills
+                      </button>
+                  </div>
+                </div>
+                <div class="createPanel">
+                  <label for="last-double" class="createLabel">Last double:</label>
+                  <div class="row" style="margin-left:15%;">
+                    <div id="date" class="col-md-6"  style="width:200px;float:left;">{{model.date.year}}-{{model.date.month}}-{{model.date.day}}</div>
+                    <div class="col-md-2" style="padding: 0px;padding-top: 5px;">
+                      <div style="width: 29px;float:left;">
+                        <my-date-picker style="width: 35%; right: 0%" name="mydate" [options]="myDatePickerOptions" [(ngModel)]="model" required></my-date-picker>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="createPanel">
+                  <label for="Dashboard Note" class="createLabel">Dashboard Note:</label>
+                  <input class="form-control" style="width:80%;float:left;" type="text" name="dashboardnote" [(ngModel)]="editNotes[0].contents" maxlength="15" />
+                </div>
+                <div class="createPanel">
+                  <label for="Private Note" class="createLabel">Private Note:</label>
+                  <textarea name="privatenote" [(ngModel)]="editNotes[1].contents" class="textarea">Enter note here...</textarea>
+                </div>
+              </form>
+              <!--form end-->
+              <button type="button" class="btn btn-default" data-dismiss="modal" (click)="tearDownEdit()">Cancel</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="saveEdit(f)">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Edit window end-->
+<!--Create window start-->
+<div id="createModal" class="modal fade">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title">New Staff Profile</h4>
+      </div>
+      <div class="modal-body">
+        <div class="panel-body">
+          <div class="row" style="padding: 3%">
+            <div class="col-md-3 col-lg-3 " align="center">
+              <img alt="User Pic" src="{{getCreateFormImageUrl()}}" class="img-circle img-responsive" style="height: 60%;width: 60%">
+
+              Upload photo
+              <input #createPhotoUpload type="file" (change)="onCreateImageAdd($event)" accept=".png, .jpg, .jpeg"  style="width: 100%">
+            </div>
+            <div class=" col-md-9 col-lg-9 ">
+              <!--form start-->
+              <form role="form" #f="ngForm">
+                <div class="createPanel">
+                  <label for="first-name" class="createLabel">First name<span style="color:red">*</span>:</label>
+                  <input (keyup)="updateAliasAdd($event)" type="text" ngModel name="firstName" class="form-control" id="first-name" style="width:80%;float:left;" #firstName="ngModel" [(ngModel)]="newnurse.first_name">
+                </div>
+                <div class="createPanel">
+                  <label for="last-name" class="createLabel">Last name<span style="color:red">*</span>:</label>
+                  <input type="text" ngModel name="lastName" class="form-control" id="last-name" style="width:80%;float:left;" #lastName="ngModel" [(ngModel)]="newnurse.last_name">
+                </div>
+                <div class="createPanel">
+                  <label for="alias" class="createLabel">Alias<span style="color:red">*</span>:</label>
+                  <input type="text" ngModel name="alias" class="form-control" id="alias-add" style="width:80%;float:left;" #alias="ngModel" [(ngModel)]="newnurse.alias">
+                </div>
+                <div class="createPanel" id = "newType">
+                  <label for="staff-type" class="createLabel">Staff type<span style="color:red">*</span>:</label>
+                  <select ngModel name="typeFilter" class="form-control" style="width:250px;float:left;" #staffType="ngModel">
+                    <option selected value=""></option>
+                    <option *ngFor="let t of nurseTypes" [value]='t.name'>{{t.name}}</option>
+                  </select>
+                  <button type="button" class="btn btn-info" style="float:right"
+                        data-toggle="modal" data-target="#typeModal">
+                        Edit Types
+                      </button>
+                </div>
+                <div class="createPanel">
+                  <label for="skills" class="createLabel">Skills:</label>
+                  <div class="filterContainer">
+                    <div class="checklist">
+                      <label style="float:left;margin-left:15px;font-weight:normal;" *ngFor="let s of skillTypes let idx = index">
+                        <input ngModel class="checkbox" name={{s.name}} value={{s.name}} type="checkbox" id="inlineCheckbox1"> {{s.name}}
+                      </label>
+                    </div>
+                      <button type="button" class="btn btn-info" style="float:right"
+                      data-toggle="modal" data-target="#skillModal">
+                      Edit Skills
+                    </button>
+                  </div>
+                </div>
+                <div class="createPanel">
+                  <label for="last-double" class="createLabel">Last double:</label>
+                  <div class="row" style="margin-left:15%;">
+                    <div id="date" class="col-md-6" style="width:200px;float:left;">{{model.date.year}}-{{model.date.month}}-{{model.date.day}}</div>
+                    <div class="col-md-2" style="padding: 0px;padding-top: 5px;">
+                      <div style="width: 29px;float:left;">
+                        <my-date-picker  ngModel style="width: 35%; right: 0%" name="mydate" [options]="myDatePickerOptions" [(ngModel)]="model" required></my-date-picker>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </form>
+              <!--form end-->
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+              <button [disabled]="staffType.value=='' || firstName== '' || lastName== ''" type="button" class="btn btn-primary" data-dismiss="modal" (click)="saveAdd(f)">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Create window end-->
+<div id="skillModal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title">Skills</h4>
+      </div>
+      <div class="modal-body skill-pane">
+        <skillpane
+          (skillChange) = "updateSkills($event)">
+        </skillpane>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Create window end-->
+<div id="typeModal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title">Types</h4>
+      </div>
+      <div class="modal-body type-pane">
+        <typepane
+          (typeChange) = "updateTypes($event)">
+        </typepane>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

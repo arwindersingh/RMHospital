@@ -1,0 +1,78 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<div class="podd-layout">
+    <div class="alert alert-success" *ngIf="saveSuccess">
+      <a class="close" (click)="dismissAlert();">&times;</a>
+      <strong>Success!</strong> Your changes were saved.
+    </div>
+
+    <div class="icon" id="icon">
+      <i class="fas fa-lg fa-question-circle"></i>
+    </div>
+
+    <div class = "helpInformation" id="help">
+			<div class="informationText">
+				<br>
+				Bed Color Meaning <br> <br>
+        <span style="background:#377BB5; opacity:0.6">&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8 hour<br>
+        <span style="background:#CC0000; opacity:0.45">&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12 hour<br>
+        <span style="background:#F2F2F2;">&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Empty<br>
+			</div>
+		</div>
+
+    <!-- the row area below -->
+    <div class="sectionA">
+        <div style="width: 37.5%">
+            <cell [alloc]="alloc" [edited]="edited" [team]="teamName.toUpperCase()" [bednum]="3"></cell>
+        </div>
+        <div *ngFor="let bednum of [2,1]">
+            <cell [alloc]="alloc" [edited]="edited" [team]="teamName.toUpperCase()" [bednum]="bednum"></cell>
+        </div>
+        <!-- An empty room -->
+        <div class="empty" style="width: 12.5%">
+        </div>
+    </div>
+    <!-- the area contains two side columes and a leader-info secion in the center -->
+    <div class="sectionB">
+        <!-- the left colume -->
+        <aside class="sectionB1">
+            <div *ngFor="let bednum of [4,5,6,7]">
+                <cell [alloc]="alloc" [edited]="edited" [team]="teamName.toUpperCase()" [bednum]="bednum"></cell>
+            </div>
+        </aside>
+        <!-- the leader-info secion in the center -->
+        <div class="leader-section">
+            <div class="leaderA">
+                    <div *ngFor="let staff of [
+                        {index: 1, name: 'consultant'},
+                        {index: 2, name: 'registrar'},
+                        {index: 3, name: 'pod_ca'}]">
+                      <cell [alloc]="alloc" [edited]="edited" [team]='A' [staff]="staff"></cell>
+                    </div>
+                </div>
+                <div class="leaderB">
+                    <div *ngFor="let staff of
+                        [{index: 4, name: 'team_leader'},
+                        {index: 5, name: 'resident'},
+                        {index: 6, name: 'ca_cleaner'}]">
+                      <cell [alloc]="alloc" [edited]="edited" [team]='A' [staff]="staff"></cell>
+                    </div>
+                </div>
+                <!-- the button area -->
+                <button class = "saveButton" [routerLinkActive]="['link-active']" [routerLink]="['/dashboard']">Back</button>        </div>
+        <!-- the right colume -->
+        <aside class="sectionB2">
+          <!-- An empty room -->
+          <div class="empty">
+          </div>
+            <div *ngFor="let bednum of [10,9,8]">
+                <cell [alloc]="alloc" [edited]="edited" [team]="teamName.toUpperCase()" [bednum]="bednum"></cell>
+            </div>
+        </aside>
+    </div>
+</div>

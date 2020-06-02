@@ -1,0 +1,29 @@
+<div class="col-md-4" style="margin-top: 20px;">
+    <small>
+        <a (click)="showUploadForm()" style="pointer:cursor;"> Toggle Upload RosterOn CSV</a>
+    </small>
+    <div id="upload_csv_form" class="{{showForm ? 'show':'hidden'}} custom-panel">
+        <div class="custom-panel-heading">Upload RosterOn CSV</div>
+        <div class="custom-panel-body">
+                <small class="warning">
+            You can download the list of currently rostered nurses from RosterOn.
+            Uploading a CSV file which is downloaded from RosterOn allows Allogator
+            to filter out the nurses that are not working for the coming allocation.
+            </small>
+                <form>
+                    <label>
+                <input type="file" id="file" accept=".csv" (change)="uploadCSV($event)" class="hidden">
+                <div class="btn btn-primary">Upload CSV</div>
+            </label>
+                </form>
+            <div class="filter-by-time {{showFilters ? 'show':'hidden'}}">
+                <h4>Filter by shift start times</h4>
+                <label *ngFor="let time of startTimes">
+                    <input type="checkbox" name="shiftStartTimes" value="{{time}}" /> {{time}}<br/>
+                </label>
+                <br/>
+                <button class="btn btn-primary" (click)="filterByTime()">Filter by selected times</button>
+            </div>
+        </div>
+    </div>
+</div>

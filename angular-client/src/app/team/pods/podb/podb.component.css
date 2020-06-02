@@ -1,0 +1,131 @@
+/* style of button
+*/
+button {
+    font-size: inherit;
+    width: 30%;
+    padding: 0.3em 0.4em;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    border: 1px solid #f90;
+    background-color: Thistle;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    margin-left: 0;
+    margin-top: 1%;
+    border-radius: 0.6em 0.6em 0.6em 0.6em;
+}
+
+/* style of help
+*/
+.icon{
+  position:absolute;
+  right:100px;
+  top:74px;
+}
+#icon:hover ~ #help{opacity: 1;}
+
+.helpInformation{
+    width:115px;
+    height:110px;
+    position:absolute;
+    right:10px;
+    top:100px;
+    border-style: solid;
+    border-width: 1px;
+    opacity: 0;
+}
+.informationText{
+    padding-left: 1px;
+    font-size: 11px;
+}
+
+/* style of pod layout
+*/
+.podb-layout{
+    width: 90%;
+    height: 88%;
+    margin-top: 0.5%;
+    margin-left: 1%;
+    font-size-adjust: auto;
+}
+.sectionA{
+    width: 100%;
+    height:23%;
+    text-align: center;
+}
+.sectionB{
+    width: 100%;
+    height:69%;
+    text-align: center;
+}
+.sectionA div{
+    float: left;
+    border-style: solid;
+    border-width: 1px;
+    width: 25%;
+    height: 100%;
+    /*padding-top: 2%;*/
+    text-align: center;
+    list-style-type: none;
+}
+.sectionB1{
+    float: left;
+    width: 25%;
+    height:100%;
+}
+.sectionB2{
+    float: left;
+    width: 25%;
+    height:100%;
+}
+.sectionB1 div,.sectionB2 div{
+    float: left;
+    height: 33.3333%;
+    width: 100%;
+    /*padding-top: 6%;*/
+    border-style: solid;
+    border-width: 1px;
+    text-align: center;
+    list-style-type: none;
+}
+.leader-section{
+    font-weight: bold;
+    float: left;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+}
+.leader{
+    width:100%;
+    height:90%;
+}
+.save {
+    width:100%;
+    height:10%;
+}
+.leaderA{
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    margin-left: 5%;
+    margin-top: 5%;
+    width:45%;
+    height:85%;
+    float: left;
+}
+.leaderB{
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    margin-right: 5%;
+    margin-top: 5%;
+    width:45%;
+    height:85%;
+    float: left;
+}
+.leaderA div,.leaderB div{
+    height: 33.3333%;
+    border-style: solid;
+    border-width: 1px;
+}

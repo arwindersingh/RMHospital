@@ -1,0 +1,20 @@
+[
+  {
+    "name": "1",
+    "staff_type": "senior",
+    "skills": [],
+    "last_double": null,
+    "photo": "photoid"
+  },
+  {
+    "name": "2",
+    "staff_type": "cnm",
+    "skills": [
+      "pulmonary",
+      "neuro",
+      "transport"
+    ],
+    "last_double": "2017-06-11",
+    "photo": "photoid"
+  }
+]

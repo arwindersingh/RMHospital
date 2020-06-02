@@ -1,0 +1,25 @@
+.panel {
+    height: 90%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border:0px;
+    font-size: 1vw;
+}
+.panel-heading {
+    padding: 0px;
+    height: 21%;
+    text-align: center;
+}
+
+.panel-body {
+    padding: 5px;
+    height: 75%;
+    overflow: hidden;
+    font-size: 1vw;
+    margin: 10px;
+}
+
+.text-input {
+    width: 100%;
+    margin: 0.6%;
+}

@@ -1,0 +1,12 @@
+#dropdown-menu.li{
+  background-color: black;
+}
+
+.navbar {
+	border-radius: 0px;
+}
+
+.not-active {
+   pointer-events: none;
+   cursor: default;
+}

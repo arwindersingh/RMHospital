@@ -1,0 +1,53 @@
+<p>Total list of all nurse types available to Nurses</p>
+<p><b>Note:</b> changing nurse types already assigned to nurses 
+  changes their associated type globally</p>
+<p><b>Note:</b> You cannot delete a type which is already associated with 
+  at least one nurse. Go to Profiles to search and remove it there first</p>
+<table class="table table-hover" style="overflow:scroll">
+  <thead>
+    <tr>
+      <th>Type Name</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td (click)="edit(typeDict[-1].designation.designation_id)" style="width:66%">
+        <input class="form-control" type="text" [(ngModel)]="typeDict[-1].designation.name"
+          [readonly]="typeDict[-1].readonly ? true : null"
+          id="{{'type' + typeDict[-1].designation.designation_id}}">
+      </td>
+      <td>
+        <button *ngIf="typeDict[-1].readonly" type="button" class="btn btn-primary"
+          (click)="edit(typeDict[-1].designation.designation_id)">
+          New
+        </button>
+        <button *ngIf="!typeDict[-1].readonly" type="button" class="btn btn-success"
+          (click)="newType()">
+          Save New
+        </button>
+      </td>
+    </tr>
+    <tr *ngFor="let s of dictToArray(typeDict)">
+      <td (click)="edit(s.designation.designation_id)">
+        <input class="form-control" type="text" [(ngModel)]="s.designation.name"
+          [readonly]="s.readonly ? true : null"
+          id="{{'type' + s.designation.designation_id}}">
+      </td>
+      <td>
+        <button *ngIf="s.readonly" type="button" class="btn btn-info"
+          (click)="edit(s.designation.designation_id)">
+          Edit
+        </button>
+        <button *ngIf="!s.readonly" type="button" class="btn btn-success" 
+          (click)="save(s.designation.designation_id)">
+          Save
+        </button>
+        <button *ngIf="!s.readonly" type="button" class="btn btn-danger" 
+          (click)="delete(s.designation.designation_id)">
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

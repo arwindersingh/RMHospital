@@ -1,0 +1,87 @@
+<div class="leftContainer" [ngStyle]="css"> 
+	<p class= "profession" *ngIf="staff">{{formatString(staff.name)}}</p><br>
+	<p class = "bed_numb" *ngIf="bednum">{{team + bednum}}</p>
+	<div class= "notes" *ngIf="staff" >{{alloc[staff.name].notes?.slice(0,1)[0]?.contents}}</div>
+</div>
+
+<div class="rightContainer"> 	
+
+	<div *ngIf="staff" class="cent" >
+		<img alt="User Pic" src={{this.imageService.getImageUrlFromId(alloc[staff.name].photo)}} class="img-circle img-responsive imgPos"> 
+
+		<div *ngIf="alloc[staff.name].staff_name" class = "nurseProfile">
+			<div class="profileText">
+				<br>
+				Profile <br>
+				Name: {{alloc[staff.name].staff_name}}<br>
+				Id: {{alloc[staff.name].id}}<br>
+				Type: {{alloc[staff.name].staff_type}}<br>
+
+				<p *ngIf="alloc[staff.name].skills.slice(0,1)[0]">
+				Skills:{{alloc[staff.name].skills[0]}}</p>
+<!-- 				<br>		
+				{{alloc[staff.name].shift_type}}
+
+         		<p *ngIf="alloc[staff.name]?.notes?.slice(0,1)[0]">Note:</p>
+         		<p *ngIf="alloc[staff.name]?.notes?.slice(0,1)[0]">
+         		{{alloc[staff.name]?.notes?.slice(0,1)[0].contents}}</p> -->
+			</div>
+		</div>     
+
+	</div>  
+
+	<div *ngIf="bednum" class="cent">
+		<img style="width: 80px" alt="User Pic" src={{this.imageService.getImageUrlFromId(alloc?.beds[bednum-1].photo)}} class="img-circle img-responsive imgPos"> 
+		<div *ngIf="alloc?.beds[bednum-1].staff_name" class = "nurseProfile">
+			<div class="profileText">
+				<br>
+				Profile <br>
+				Name: {{alloc?.beds[bednum-1].staff_name}}<br>
+				Id: {{alloc?.beds[bednum-1].id}}<br>
+				Type: {{alloc?.beds[bednum-1].staff_type}}<br>
+				Skills: {{alloc?.beds[bednum-1].skills}}<br>
+			</div>
+		</div>  
+	</div>  
+
+	<p  class="staff_name" *ngIf="staff" (click) = "showInfo(alloc[staff.name].staff_type)">{{alloc[staff.name].staff_name}}</p>
+	<p class="nurse_name" *ngIf="bednum">{{alloc?.beds[bednum-1].staff_name}}</p>
+</div>
+
+<!-- <div class="cent">  
+    This is the cent div  
+    <div class="cs">  
+        <p>this is a cs div</p>  
+    </div>  
+</div>   -->
+
+<!-- <input *ngIf="staff" [readonly]="!edited" id="L{{staff.index}}" class="inputText" type="text" name="{{staff.name}}" [(ngModel)]="alloc[staff.name].staff_name"> -->
+
+
+ 
+
+<!-- <input *ngIf="bednum" [readonly]="!edited" id="{{team + bednum}}" class="inputText" type="text" name="nurseName" [(ngModel)]="alloc?.beds[bednum-1].staff_name"> -->
+
+
+
+        	
+
+
+<!-- <label *ngIf="alloc && edited">
+  <input *ngIf="staff" class="radio" name="shiftTimeL{{staff.index}}" [(ngModel)]="alloc[staff.name].shift_type" type="radio" value="8" (click)="shiftColor('L'+staff.index,'8');" />
+  <input *ngIf="bednum" class="radio" name="shiftTime{{team + bednum}}" [(ngModel)]="alloc?.beds[bednum-1].shift_type" type="radio" value="8" (click)="shiftColor(team+bednum,'8');" /> 8 hours
+</label>
+
+&nbsp;
+
+<label *ngIf="alloc && edited">
+  <input *ngIf="staff" class="radio" name="shiftTimeL{{staff.index}}" [(ngModel)]="alloc[staff.name].shift_type" type="radio" value="12" (click)="shiftColor('L'+staff.index,'12');" />
+  <input *ngIf="bednum" class="radio" name="shiftTime{{team + bednum}}" [(ngModel)]="alloc?.beds[bednum-1].shift_type" type="radio" value="12" (click)="shiftColor(team+bednum,'12');" /> 12 hours
+</label>
+
+&nbsp;
+
+<label *ngIf="alloc && edited">
+  <input *ngIf="staff" class="radio" name="shiftTimeL{{staff.index}}" [(ngModel)]="alloc[staff.name].shift_type" type="radio" value="closed" (click)="shiftColor('L'+staff.index,'closed');" />
+  <input *ngIf="bednum" class="radio" name="shiftTime{{team + bednum}}" [(ngModel)]="alloc?.beds[bednum-1].shift_type" type="radio" value="closed" (click)="shiftColor(team+bednum,'closed');" /> Empty
+</label> -->

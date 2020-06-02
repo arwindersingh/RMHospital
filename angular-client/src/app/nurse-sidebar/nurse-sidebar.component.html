@@ -1,0 +1,312 @@
+<div class="container-fluid">
+  <div class="row">
+    <!--pod map start-->
+    <div id="map" class="col-md-8" (mouseleave)="autosaveAllocation()">
+      <div *ngIf="poda" class="poda-layout">
+        <!-- the row area above -->
+        <div class="sectionA">
+          <div *ngFor="let bednum of [1,2,3,4];">
+            <sidebar-cell 
+              [bednum]="bednum" 
+              [team]="teamName[0]" 
+              [staff]="poda.beds[bednum-1]" 
+              [shift_type]="poda.beds[bednum-1].shift_type" 
+              (clickCell)="clickCell($event,'A'+bednum)">
+            </sidebar-cell>
+          </div>
+        </div>
+        <!-- the area contains two side columes and a leader-info section in the center -->
+        <div class="sectionB">
+          <!-- the left colume -->
+          <aside class="sectionB1">
+            <div *ngFor="let bednum of [12,11,10,9]">
+              <sidebar-cell (clickCell)="clickCell($event,'A'+bednum)" [bednum]="bednum" [team]="teamName[0]" [staff]="poda.beds[bednum-1]" [shift_type]="poda.beds[bednum-1].shift_type"></sidebar-cell>
+            </div>
+          </aside>
+          <!-- the leader-info secion in the center and the button area -->
+          <div class="leader-section">
+            <!-- the leader-info secion -->
+            <div class="leader">
+              <div class="leaderA">
+                <div *ngFor="let staff of [
+                        {index: 1, name: 'consultant'}, 
+                        {index: 2, name: 'registrar'}, 
+                        {index: 3, name: 'pod_ca'}]">
+                  <sidebar-cell [bednum]="staff.name" [staff]="poda[staff.name]" [shift_type]="poda[staff.name].shift_type" (clickCell)="clickCell($event,'A'+staff.name)"></sidebar-cell>
+                </div>
+              </div>
+              <div class="leaderB">
+                <div *ngFor="let staff of 
+                        [{index: 4, name: 'team_leader'}, 
+                        {index: 5, name: 'resident'}, 
+                        {index: 6, name: 'ca_cleaner'}]">
+                  <sidebar-cell [bednum]="staff.name" [staff]="poda[staff.name]" [shift_type]="poda[staff.name].shift_type" (clickCell)="clickCell($event,'A'+staff.name)"></sidebar-cell>
+                </div>
+              </div>
+            </div>
+             <div class="podtitle" style="padding-top: 2%">
+                    <label for="podd">Pod A</label>
+                </div>
+          </div>
+          <!-- the right colume -->
+          <aside class="sectionB2">
+            <div *ngFor="let bednum of [5,6,7,8]">
+              <sidebar-cell (clickCell)="clickCell($event,'A'+bednum)" [bednum]="bednum" [team]="teamName[0]" [staff]="poda.beds[bednum-1]" [shift_type]="poda.beds[bednum-1].shift_type"></sidebar-cell>
+            </div>
+          </aside>
+        </div>
+      </div>
+      <div *ngIf="podb" class="podb-layout">
+        <!-- the area contains two side columes and a leader-info secion in the center -->
+        <div class="b_sectionB ">
+          <!-- the left colume -->
+          <aside class="b_sectionB1">
+            <div *ngFor="let bednum of [10,9,8]">
+              <sidebar-cell (clickCell)="clickCell($event,'B'+bednum)" [bednum]="bednum" [team]="teamName[1]" [staff]="podb.beds[bednum-1]" [shift_type]="podb.beds[bednum-1].shift_type"></sidebar-cell>
+            </div>
+          </aside>
+          <!-- the leader-info secion in the center -->
+          <div class="b_leader-section">
+            <div class="b_leaderA">
+              <div *ngFor="let staff of [
+                        {index: 1, name: 'consultant'}, 
+                        {index: 2, name: 'registrar'}, 
+                        {index: 3, name: 'pod_ca'}]">
+                <sidebar-cell [bednum]="staff.name" [staff]="podb[staff.name]" [shift_type]="podb[staff.name].shift_type" (clickCell)="clickCell($event,'B'+staff.name)"></sidebar-cell>
+              </div>
+            </div>
+            <div class="b_leaderB">
+              <div *ngFor="let staff of 
+                        [{index: 4, name: 'team_leader'}, 
+                        {index: 5, name: 'resident'}, 
+                        {index: 6, name: 'ca_cleaner'}]">
+                <sidebar-cell [bednum]="staff.name" [staff]="podb[staff.name]" [shift_type]="podb[staff.name].shift_type" (clickCell)="clickCell($event,'B'+staff.name)"></sidebar-cell>
+              </div>
+            </div>
+             <div class="podtitle">
+                    <label for="podd">Pod B</label>
+              </div>
+          </div>
+
+          <!-- the right colume -->
+          <aside class="b_sectionB2">
+            <div *ngFor="let bednum of [1,2,3]">
+              <sidebar-cell (clickCell)="clickCell($event,'B'+bednum)" [bednum]="bednum" [team]="teamName[1]" [staff]="podb.beds[bednum-1]" [shift_type]="podb.beds[bednum-1].shift_type"></sidebar-cell>
+            </div>
+          </aside>
+        </div>
+        <!-- the row area below -->
+        <div class="b_sectionA">
+          <div *ngFor="let bednum of [7,6,5,4]">
+            <sidebar-cell (clickCell)="clickCell($event,'B'+bednum)" [bednum]="bednum" [team]="teamName[1]" [staff]="podb.beds[bednum-1]" [shift_type]="podb.beds[bednum-1].shift_type"></sidebar-cell>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="podc" class="podc-layout">
+        <!-- the area contains two side columes and a leader-info secion in the center -->
+        <div class="c_sectionB">
+          <!-- the left colume -->
+          <aside class="c_sectionB1">
+            <div *ngFor="let bednum of [1,2,3]">
+              <sidebar-cell (clickCell)="clickCell($event,'C'+bednum)" [bednum]="bednum" [team]="teamName[2]" [staff]="podc.beds[bednum-1]" [shift_type]="podc.beds[bednum-1].shift_type"></sidebar-cell>
+            </div>
+          </aside>
+          <!-- the leader-info secion in the center -->
+          <div class="c_leader-section">
+            <div class="c_leaderA">
+              <div *ngFor="let staff of [
+              {index: 1, name: 'consultant'}, 
+              {index: 2, name: 'registrar'}, 
+              {index: 3, name: 'pod_ca'}]">
+                <sidebar-cell [bednum]="staff.name" [staff]="podc[staff.name]" [shift_type]="podc[staff.name].shift_type" (clickCell)="clickCell($event,'C'+staff.name)"></sidebar-cell>
+              </div>
+            </div>
+            <div class="c_leaderB">
+              <div *ngFor="let staff of 
+              [{index: 4, name: 'team_leader'}, 
+              {index: 5, name: 'resident'}, 
+              {index: 6, name: 'ca_cleaner'}]">
+                <sidebar-cell [bednum]="staff.name" [staff]="podc[staff.name]" [shift_type]="podc[staff.name].shift_type" (clickCell)="clickCell($event,'C'+staff.name)"></sidebar-cell>
+              </div>
+            </div>
+             <div class="podtitle">
+                    <label for="podd">Pod C</label>
+                </div>
+          </div>
+          <!-- the right colume -->
+          <aside class="c_sectionB2">
+            <div *ngFor="let bednum of [10,9,8]">
+              <sidebar-cell (clickCell)="clickCell($event,'C'+bednum)" [bednum]="bednum" [team]="teamName[2]" [staff]="podc.beds[bednum-1]" [shift_type]="podc.beds[bednum-1].shift_type"></sidebar-cell>
+            </div>
+          </aside>
+        </div>
+        <!-- the row area below -->
+        <div class="c_sectionA">
+          <div *ngFor="let bednum of [4,5,6,7]">
+            <sidebar-cell (clickCell)="clickCell($event,'C'+bednum)" [bednum]="bednum" [team]="teamName[2]" [staff]="podc.beds[bednum-1]" [shift_type]="podc.beds[bednum-1].shift_type"></sidebar-cell>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="podd" class="podd-layout">
+        <div class="sectionA">
+          <div style="width: 37.5%">
+            <sidebar-cell (clickCell)="clickCell($event,'D'+3)" [bednum]="3" [team]="teamName[3]" [staff]="podd.beds[3-1]" [shift_type]="podd.beds[3-1].shift_type"></sidebar-cell>
+          </div>
+          <div *ngFor="let bednum of [2,1]">
+            <sidebar-cell (clickCell)="clickCell($event,'D'+bednum)" [bednum]="bednum" [team]="teamName[3]" [staff]="podd.beds[bednum-1]" [shift_type]="podd.beds[bednum-1].shift_type"></sidebar-cell>
+          </div>
+          <!-- An empty room -->
+          <div style="width:12.5%"></div>
+        </div>
+        <div class="sectionB">
+          <aside class="sectionB1">
+            <div *ngFor="let bednum of [4,5,6,7]">
+              <sidebar-cell (clickCell)="clickCell($event,'D'+bednum)" [bednum]="bednum" [team]="teamName[3]" [staff]="podd.beds[bednum-1]" [shift_type]="podd.beds[bednum-1].shift_type"></sidebar-cell>
+            </div>
+          </aside>
+          <div class="leader-section">
+            <div class="leaderA">
+              <div *ngFor="let staff of [
+              {index: 1, name: 'consultant'}, 
+              {index: 2, name: 'registrar'}, 
+              {index: 3, name: 'pod_ca'}]">
+                <sidebar-cell [bednum]="staff.name" [staff]="podd[staff.name]" [shift_type]="podd[staff.name].shift_type" (clickCell)="clickCell($event,'D'+staff.name)"></sidebar-cell>
+              </div>
+            </div>
+            <div class="leaderB">
+              <div *ngFor="let staff of 
+              [{index: 4, name: 'team_leader'}, 
+              {index: 5, name: 'resident'}, 
+              {index: 6, name: 'ca_cleaner'}]">
+                <sidebar-cell [bednum]="staff.name" [staff]="podd[staff.name]" [shift_type]="podd[staff.name].shift_type" (clickCell)="clickCell($event,'D'+staff.name)"></sidebar-cell>
+              </div>
+            </div>
+             <div class="podtitle">
+                    <label for="podd">Pod D</label>
+                </div>
+          </div>
+          <aside class="sectionB2">
+            <!-- An empty room -->
+            <div></div>
+            <div *ngFor="let bednum of [10,9,8]">
+              <sidebar-cell (clickCell)="clickCell($event,'D'+bednum)" [bednum]="bednum" [team]="teamName[3]" [staff]="podd.beds[bednum-1]" [shift_type]="podd.beds[bednum-1].shift_type"></sidebar-cell>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+    <!--pod map end-->
+    <!--edit card and filter start-->
+    <div class="col-md-4" style="height: 25%;min-height: 150px;">
+      <div class="editcard">
+        <!--edit card start-->
+        <edit-card *ngIf="selectedBed" 
+          [staff]="selectedBed" 
+          [shift_type]="selectedBed.shift_type" 
+          [position]="selectedBedId" 
+          (delete)="deleteBed($event)"
+          (noteEmitter)="saveNote($event)">
+        </edit-card>
+        <!--edit card end-->
+        <!--filter start-->
+        <div id="search">
+          <input placeholder="Search by name" [(ngModel)]="search" class="input-medium search-query" type="text" />
+          <input placeholder="Search by type" [(ngModel)]="search2" class="input-medium search-query" type="text" />
+          <input placeholder="Search by skill" [(ngModel)]="search3" class="input-medium search-query" type="text" />
+          <button class="btn btn-xs btn-primary" id="savebtn" (click)="saveAllocation()">Save All</button>
+        </div>
+
+        <!--filter end-->
+      </div>
+    </div>
+    <!-- csv file upload start -->
+    <uploadcsv (uploaded) = "rosteredNurses($event)" >
+    </uploadcsv>
+    <!-- csv file upload end -->
+
+    <!-- <pre>{{warnMessage}}</pre> -->
+
+    <!--edit card and filter end-->
+    <!--nurse list start-->
+    <div id="sidebar" class="col-md-4">
+      <div *ngIf="sidebarNurseList" class="row" [dragula]='"bag-one"'>
+        <div *ngFor="let nurse of (sidebarNurseList|searchPipe:search:search2:search3)" class="row" style="height: 18%; margin: 3.5%;background-color: white;min-height: 120px;">
+          <div class="alert" [ngClass]="{'alert-warning': nurse.tasks.length == 0,'alert-info': nurse.tasks.length == 1,'alert-danger': nurse.tasks.length>= 2, 'alert-very-danger': nurse.tasks.length > 2, 'not-rost':isRost(nurse)==1,'rost':isRost(nurse)==2}"
+            >
+            <div class="panel-body" style="cursor:pointer;" (mousedown)="selectNurse(nurse)">
+              <img style="max-width: 30%" src={{this.imageService.getImageUrlFromId(nurse.photo)}} class="pic_ina img-thumbnail" />
+              <div class="con_ina">
+                <b> Name:</b> {{nurse?.staff_name}}
+                <br>
+                <b> Type:</b> {{nurse?.staff_type}}
+                <br>
+                <b> Skills:</b> {{skillsToStr(nurse?.skills)}}
+                <br>
+                <b> Last Double:</b> {{nurse?.last_double}}
+                <br>
+                <b> Tasks:</b> {{nurse?.tasks}}
+              </div>
+            </div>
+            <div style="position: absolute;height: 5%;left: 72%; width:20%">
+              <button (click)="lgModal.show()" (click)="showDetailNurse(nurse)" class="btn btn-info btn-xs " style="width:100%">Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--nurse list end-->
+    <!--pop out window start-->
+    <div bsModal #lgModal="bs-modal" class="modal fade" tabindex="" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" style="height: 33%;">
+        <div class="modal-content" style="height: auto;">
+          <div class="modal-body">
+            <!--show profile start-->
+            <div class="panel-body">
+              <div class="row" style="padding: 3%">
+                <div *ngIf="detailNurse" class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src={{this.imageService.getImageUrlFromId(detailNurse.photo)}} class="img-circle img-responsive"> </div>
+                <div class=" col-md-9 col-lg-9 ">
+                  <table *ngIf="detailNurse" class="table table-user-information" style="font-size: 0.75vw;">
+                    <tbody>
+                      <tr>
+                        <td><p style="width: 150px;">Staff Name:</p></td>
+                        <td>{{detailNurse.staff_name}}</td>
+                      </tr>
+                      <tr>
+                        <td>RosterOn ID:</td>
+                        <td>{{detailNurse.rosteron_id}}</td>
+                      </tr>
+                      <tr>
+                        <td>Staff Type</td>
+                        <td>{{detailNurse.staff_type}}</td>
+                      </tr>
+                      <tr>
+                        <td>Skills</td>
+                        <td>{{detailNurse.skills}}</td>
+                      </tr>
+                      <tr>
+                        <td>Last Double</td>
+                        <td>{{detailNurse.last_double}}</td>
+                      </tr>
+                      <tr>
+                        <td popover="Recent double is all doubles in the last 90 days" triggers="mouseenter:mouseleave">Recent Doubles</td>
+                        <td>{{selectedRecentDouble}}</td>
+                      </tr>
+                      <tr>
+                        <td>Dashboard Note</td>
+                        <td style="word-break:break-all; width:100%;">{{detailNurse?.notes?.slice(0,1)[0]?.contents}}</td>
+                      </tr>
+                      <tr>
+                        <td>Private Note</td>
+                        <td style="word-break:break-all; width:100%;">{{detailNurse?.notes?.slice(1,2)[0]?.contents}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!--show profile end-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--pop out window end-->

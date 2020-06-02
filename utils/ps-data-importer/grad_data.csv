@@ -1,0 +1,220 @@
+﻿Last Name,First Name,RosterOnID,Type,Last double,ALS,Transport
+Madsen,Cherilie,23242,Data Nurse - B0014,,FALSE,FALSE
+De Loree,Gavin,87863,Donation Specialist Nursing Coordinator,,FALSE,FALSE
+Rippon,Vicki,22190,Donation Specialist Nursing Coordinator,,FALSE,FALSE
+Sullivan,Bethany,84336,Donation Specialist Nursing Coordinator,,FALSE,FALSE
+Spence,Michelle,37399,NUM,,TRUE,TRUE
+Hadley,Dan,28219,CNM,,TRUE,TRUE
+Mesfin,Lidgalem,21792,CNM,,TRUE,TRUE
+Moore,David,21763,CNM,,FALSE,FALSE
+Adamson,Nathaniel,56653,ANUM,,TRUE,TRUE
+Butler,Mena,36236,ANUM,,TRUE,TRUE
+Cavric,Amy,62994,ANUM,,TRUE,TRUE
+Constantino,Michelle,49305,ANUM,,TRUE,TRUE
+Cossar,Sue,21734,ANUM,,TRUE,TRUE
+De La Cruz,Alfredo,22719,ANUM,,TRUE,TRUE
+Forrest,Joanne,47124,ANUM,,TRUE,TRUE
+Gebbie,Brad,55496,ANUM,,TRUE,TRUE
+Gilbert,Georgina,22996,ANUM,,TRUE,TRUE
+Glazner,Daniel,51339,ANUM,,FALSE,FALSE
+Hall,Pip,24793,ANUM,,FALSE,FALSE
+Mcfarlane,Angela,56564,ANUM,,FALSE,FALSE
+Pressnell,Lianne,22181,ANUM,,FALSE,FALSE
+Rivera,Katherine,29299,ANUM,,FALSE,FALSE
+Sliwa,Nicole,23908,ANUM,,TRUE,TRUE
+Smith,Adam,53498,ANUM,,TRUE,TRUE
+Swords,Kim,70890,ANUM,,TRUE,TRUE
+Williamson,Caroline,21783,ANUM,,TRUE,TRUE
+Wilson,Jack,44001,ANUM,,TRUE,TRUE
+Youla,Kevin,24369,ANUM,,TRUE,TRUE
+Blackburn,Lisa,32212,CNC,,TRUE,TRUE
+Kelly,Megan,51351,CNC,,TRUE,TRUE
+King,Katie,24337,CNC,,TRUE,TRUE
+Lumsden,Jennifer,23174,CNC,,TRUE,TRUE
+Marrs,Kelly,52712,CNC,,TRUE,TRUE
+Stone,Christine,22021,CNC,,TRUE,TRUE
+Tondello,Mark,21680,CNC,,TRUE,TRUE
+Ekers,Tristan,60324,MERN,,TRUE,TRUE
+Ferguson,Holly,39124,MERN,,TRUE,TRUE
+Galea,Hayley,61555,MERN,,TRUE,TRUE
+Kaur,Maninder,53397,MERN,,TRUE,TRUE
+Munro,Kate,56440,MERN,,TRUE,TRUE
+Sandalls,Christopher,23492,MERN,,TRUE,TRUE
+Tadgell,Emma,55580,MERN,,TRUE,TRUE
+Wickett,Alice,70000,MERN,,TRUE,TRUE
+Binder,Liran,72149,Team Leader - Group 1,,TRUE,TRUE
+Craig,Sally,66080,Team Leader - Group 1,,TRUE,TRUE
+Dale,Vic,39895,Team Leader - Group 1,,FALSE,FALSE
+Dooley,Kim,60321,Team Leader - Group 1,,TRUE,TRUE
+Entwistle,Jasmine,65733,Team Leader - Group 1,,TRUE,TRUE
+Fitch,Jessica,74690,Team Leader - Group 1,,TRUE,TRUE
+Inglis,Joshua,65305,Team Leader - Group 1,,TRUE,TRUE
+Jones,Caitlin,72177,Team Leader - Group 1,,TRUE,TRUE
+Mifsud,Kate,67315,Team Leader - Group 1,,TRUE,TRUE
+Rickard,Eva,51376,Team Leader - Group 1,,TRUE,TRUE
+Tilley,Jonathon,84631,Team Leader - Group 1,,TRUE,TRUE
+Willis,Samantha,28270,Team Leader - Group 1,,TRUE,TRUE
+Ambalavanar,Neela,47328,Team Leader - Support,,TRUE,TRUE
+Cooke,Natalie,60319,Team Leader - Support,,TRUE,TRUE
+Giggins,Lauren,61248,Team Leader - Support,,TRUE,TRUE
+Marsiglio,Eloise,55551,Team Leader - Support,,TRUE,TRUE
+Reilly,Bec,60869,Team Leader - Support,,TRUE,TRUE
+Zaccagnini-Hitchcock,Elisa,56555,Team Leader - Support,,TRUE,TRUE
+Alexopoulos,Nicola,61524,CNS,,FALSE,FALSE
+Bennett,Catherine,21733,CNS,,TRUE,TRUE
+Burgess,Emily,53004,CNS,,TRUE,TRUE
+Davidge,Keren,22674,CNS,,TRUE,TRUE
+Elsbury,Jennifer,21842,CNS,,TRUE,TRUE
+Fenwicke,Prue,82067,CNS,,TRUE,TRUE
+Fernando,Patricia,63918,CNS,,TRUE,TRUE
+Gellis,Arthur,21660,CNS,,TRUE,TRUE
+Gray,Rebecca,61517,CNS,,TRUE,TRUE
+Griffiths-Kelly,Samantha,22048,CNS,,TRUE,TRUE
+Grikepelis,Matt,28225,CNS,,TRUE,TRUE
+Hajialiakbar,Zahra,30235,CNS,,TRUE,TRUE
+Hansen,Emma,34337,CNS,,TRUE,TRUE
+Heily,Meredith,24394,CNS,,TRUE,TRUE
+Hurley,Elizabeth,24383,CNS,,TRUE,TRUE
+Jones,Kellie,72187,CNS,,TRUE,TRUE
+Kavanagh,Jo,22296,CNS,,TRUE,TRUE
+Keith,Rebecca,21813,CNS,,TRUE,TRUE
+Kerativiriyaporn,Mee,63669,CNS,,TRUE,TRUE
+Kim,Yoowoon,29145,CNS,,TRUE,TRUE
+Lemoh,Alison,85938,CNS,,TRUE,TRUE
+Li,Hui,47829,CNS,,TRUE,TRUE
+Lia,Elisha,36204,CNS,,TRUE,TRUE
+Lillibridge,Nichole,85886,CNS,,FALSE,FALSE
+Mcdonald,Andrea,52383,CNS,,TRUE,TRUE
+Mcdonald,Danielle,23431,CNS,,TRUE,TRUE
+Montgomery,Adele,22664,CNS,,FALSE,FALSE
+Munisamy,Jayanthi,56576,CNS,,TRUE,TRUE
+Nelson,Sarah,23658,CNS,,FALSE,FALSE
+Ngo,Lan,23552,CNS,,TRUE,TRUE
+O'Sullivan,Michelle,29749,CNS,,TRUE,TRUE
+Ow,Sandy,56718,CNS,,TRUE,TRUE
+Park,Seunga,36418,CNS,,TRUE,TRUE
+Porter,Lorinda,27249,CNS,,TRUE,TRUE
+Redl,Leanne,24008,CNS,,TRUE,TRUE
+Rogers,Amy,21908,CNS,,TRUE,TRUE
+Saker,Emma,23106,CNS,,TRUE,TRUE
+Simmons,Camila,56544,CNS,,FALSE,FALSE
+Tan,Mary,21838,CNS,,TRUE,TRUE
+Trevithick,Christine,21827,CNS,,TRUE,TRUE
+Underwood,Rhonda,21819,CNS,,TRUE,TRUE
+Vernon,Alan,23140,CNS,,TRUE,TRUE
+Vernon,Julie,21849,CNS,,TRUE,TRUE
+Walker,Jo,22507,CNS,,TRUE,TRUE
+Walker,Kath,21774,CNS,,TRUE,TRUE
+Watson,Rachael,28217,CNS,,TRUE,TRUE
+Woods,Tanya,87004,CNS,,TRUE,TRUE
+Alger,Sharon,21862,CCRN,,TRUE,TRUE
+Amato,Rachael,46935,CCRN,,FALSE,FALSE
+Arce Arango,Paola Andrea,86905,CCRN,,TRUE,TRUE
+Bagtas,Ninianne,83941,CCRN,,TRUE,TRUE
+Bantick,Melissa,22662,CCRN,,TRUE,TRUE
+Battisson,Carly,70056,CCRN,,TRUE,TRUE
+Bennett,Oliver,79496,CCRN,,TRUE,TRUE
+Blake,Maeve,73585,CCRN,,TRUE,TRUE
+Blyth,Kelly,74399,CCRN,,TRUE,TRUE
+Boland,Annie,21695,CCRN,,TRUE,TRUE
+Bonnici,Faye,21675,CCRN,,TRUE,TRUE
+Cachia,Louise,36232,CCRN,,FALSE,FALSE
+Caf,Tania,33379,CCRN,,TRUE,TRUE
+Camilleri,Kim,61551,CCRN,,TRUE,TRUE
+Cannon,Casilda,51622,CCRN,,TRUE,TRUE
+Cesarone,Nicola,75468,CCRN,,FALSE,FALSE
+Cheale,Regina,24320,CCRN,,TRUE,TRUE
+Chua,Leanne,88905,CCRN,,TRUE,TRUE
+Cooper,Kathryn,89548,CCRN,,TRUE,TRUE
+Corcoran,Caroline,65412,CCRN,,TRUE,TRUE
+Deo,Savitiri,64072,CCRN,,TRUE,TRUE
+Di Lorenzo,Cassie,76733,CCRN,,TRUE,TRUE
+Edwards,Chantel,82518,CCRN,,FALSE,FALSE
+Fabreo,George,51334,CCRN,,TRUE,TRUE
+Fernando,Anthony,59672,CCRN,,TRUE,TRUE
+Footner,Kate,42711,CCRN,,TRUE,TRUE
+Fortune,Emily,65302,CCRN,,TRUE,TRUE
+Foster,Alex,79495,CCRN,,TRUE,TRUE
+Garrett,Cara,63998,CCRN,,TRUE,TRUE
+George Mathew,Juan,88485,CCRN,,FALSE,FALSE
+George,Alastair,70367,CCRN,,TRUE,TRUE
+Godley,Karen,44915,CCRN,,FALSE,FALSE
+Goh,John,90655,CCRN,,TRUE,TRUE
+Greener,Jill,31313,CCRN,,TRUE,TRUE
+Greig,Sophie,85551,CCRN,,TRUE,TRUE
+Hackenberger,Lewis,84226,CCRN,,TRUE,TRUE
+Hawker,Mairin,21740,CCRN,,TRUE,TRUE
+Hindson,Ross,22614,CCRN,,TRUE,TRUE
+Ivers,Anne,31406,CCRN,,TRUE,TRUE
+JENKIN,Fiona,84025,CCRN,,TRUE,TRUE
+Kim,Rebecca,70371,CCRN,,TRUE,TRUE
+Lee,Cecillia,90415,CCRN,,TRUE,TRUE
+Leigh,Fiona,41896,CCRN,,TRUE,TRUE
+Lindop,Rosemary,88063,CCRN,,TRUE,TRUE
+Lindsay,Stacey,85288,CCRN,,TRUE,TRUE
+Luengen,Astrid,30492,CCRN,,TRUE,TRUE
+Mahoney,Lexie,91008,CCRN,,FALSE,FALSE
+Mcewen,Greg,22180,CCRN,,TRUE,TRUE
+Mcgrath,Amanda,56434,CCRN,,FALSE,FALSE
+Mckay,Kate,53009,CCRN,,TRUE,TRUE
+Mcminn,Margot,56577,CCRN,,FALSE,FALSE
+Monahan,Lucille,46789,CCRN,,TRUE,TRUE
+Moore,Jade,84266,CCRN,,TRUE,FALSE
+Morales,Allan,64657,CCRN,,TRUE,TRUE
+Ng,Jade,86308,CCRN,,TRUE,TRUE
+Nicholls,Tara,51448,CCRN,,FALSE,FALSE
+Nowakowski,Amanda,73484,CCRN,,TRUE,TRUE
+O'Dwyer,Alan,81666,CCRN,,TRUE,TRUE
+Packer,Alex,90409,CCRN,,TRUE,TRUE
+Phelan,Sarah,65044,CCRN,,TRUE,TRUE
+Pierce,Rebecca,73458,CCRN,,TRUE,TRUE
+Plummer,Abbey,81308,CCRN,,TRUE,TRUE
+Roberts,Kayla,66085,CCRN,,TRUE,TRUE
+Roberts,Lauren,59135,CCRN,,TRUE,TRUE
+Robinson,Tori,69278,CCRN,,TRUE,TRUE
+Rodda,Nicholas,84800,CCRN,,TRUE,TRUE
+Rogers,Libbi,30189,CCRN,,TRUE,TRUE
+Rule,Gavin,82454,CCRN,,TRUE,TRUE
+Santiago,Cynthia,NEW_IW_ICU,CCRN,,FALSE,FALSE
+Semetas,Jennifer,82997,CCRN,,TRUE,TRUE
+Smith,Liz,57212,CCRN,,TRUE,TRUE
+Spizzirri,Geraldine,45269,CCRN,,FALSE,FALSE
+Stephens,Melissa,76781,CCRN,,TRUE,TRUE
+Stockdale,Terese,84314,CCRN,,TRUE,TRUE
+Swallow,Jessie,74691,CCRN,,TRUE,TRUE
+Symons,Skye,55058,CCRN,,TRUE,TRUE
+Tait,Lachlan,82993,CCRN,,TRUE,TRUE
+Teague,Erin,45135,CCRN,,TRUE,TRUE
+Tio,Jeramie,90061,CCRN,,TRUE,TRUE
+Tonini,Emma,72178,CCRN,,TRUE,TRUE
+Vienet,Stephanie,70150,CCRN,,TRUE,TRUE
+Wainewright,Jacq,46800,CCRN,,TRUE,TRUE
+Watt,Nicole,26600,CCRN,,TRUE,TRUE
+Weis,Nick,68286,CCRN,,TRUE,TRUE
+Wells,Alison,81879,CCRN,,TRUE,TRUE
+Wong,Yao,66163,CCRN,,TRUE,TRUE
+May,Victoria,89665,GradCert CTS,,FALSE,FALSE
+Pydiah,Vishmi,77686,GradCert CTS,,FALSE,FALSE
+Astling,Jim,84683,RN Div 1,,TRUE,TRUE
+Attunaga,Maria,90218,RN Div 1,,TRUE,TRUE
+Barnewall,Doug,86126,RN Div 1,,TRUE,TRUE
+Byron,Kerry,54136,RN Div 1,,FALSE,FALSE
+CONROY,SALLY,AGY69547,RN Div 1,,FALSE,FALSE
+Dean,Michaela,74343,RN Div 1,,TRUE,TRUE
+Derkowska,Anna,38108,RN Div 1,,TRUE,TRUE
+Dunn,Wendy,21947,RN Div 1,,TRUE,TRUE
+Fontaine,Erika,90622,RN Div 1,,TRUE,TRUE
+Garland,Amy,85072,RN Div 1,,TRUE,TRUE
+GOODWIN,TANIA,AGY57623,RN Div 1,,FALSE,FALSE
+LOVELL,SUE,AGY57799,RN Div 1,,FALSE,FALSE
+Mills,Susan,21640,RN Div 1,,TRUE,TRUE
+Mitchell,Carly,85484,RN Div 1,,FALSE,FALSE
+Purvis,Jacqueline,61847,RN Div 1,,TRUE,TRUE
+Quan,Lin,85106,RN Div 1,,TRUE,TRUE
+Stein,Anna,85963,RN Div 1,,TRUE,TRUE
+Strachan,Jennifer,59154,RN Div 1,,TRUE,TRUE
+TABOTABO,ERICA,AGY72714,RN Div 1,,FALSE,FALSE
+Thompson,Jeremy,22237,RN Div 1,,TRUE,TRUE
+Barge,Deborah,22773,Research Nurse (Y7891),,FALSE,FALSE
+Byrne,Kathleen,90270,Research Nurse (Y7891),,FALSE,FALSE
+Doherty,Sarah,90209,Research Nurse (Y7891),,FALSE,FALSE

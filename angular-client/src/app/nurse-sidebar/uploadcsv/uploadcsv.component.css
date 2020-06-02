@@ -1,0 +1,27 @@
+.custom-panel {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.custom-panel-heading {
+    text-align: center;
+    background: #8ce;
+    padding : 5px 0px;
+    color:#fff;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.custom-panel-body {
+    padding: 5px;
+    overflow: hidden;
+    font-size: 16px;
+    margin: 10px;
+}
+button.upload{
+    margin-top:5px;
+    transform:scale(0.8);
+}
+.custom-panel-body > p.help-text{
+    font-size:12px;
+}

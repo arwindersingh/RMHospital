@@ -1,0 +1,394 @@
+html,body,div{
+    height: 100%;
+}
+.rost{
+    border: 2px solid;
+}
+
+.not-rost{
+    opacity: 0.6;
+}
+
+#map {
+	height: 100%;
+	overflow: auto;
+	padding-left: 0%;
+}
+
+#sidebar{
+	height: 74%;
+	overflow: auto;
+}
+
+#search{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    height: 25%;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    background:lightgrey;
+    font-size: 1vw;
+}
+
+#search input{
+
+    width: 25%
+    
+}
+
+#savebtn {
+    width: 15%;
+    margin: 9px;
+    font-size: 0.75vw;
+    left: 0px;
+    position: relative;
+    padding-left: 5px;
+    height: 71%
+}
+
+
+.panel-body {
+    padding: 0%;
+    font-size: 0.75vw;
+}
+
+.pic_ina {
+    height:105%;
+    float:left;
+}
+
+.con_ina {
+    height: 103%;
+    width: 55%;
+    margin-left:3%;
+    float:left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.btn_inr
+{
+    float:right;
+    
+}
+
+.podtitle{
+    height: 15%;
+    width: 100%;
+    float: left;
+    padding-top: 5%
+}
+
+.podtitle label{
+    font-size: 24px;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+}
+
+.podd-layout{
+    height: 88%;
+    margin-left: 15px;
+    font-size-adjust: auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #fffba1;
+    margin-bottom: 20px;
+}
+.podd-layout {
+    background: #89ccfb;
+}
+
+
+/* style of poda layout*/
+.poda-layout{
+    height: 88%;
+    margin-left: 15px;
+    font-size-adjust: auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #fffba1;
+    margin-bottom: 20px;
+}
+.sectionA{
+    height:20%;
+}
+.sectionB{
+    height:80%;
+}
+.sectionA div{
+    float: left;
+    padding: 0.5%;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    list-style-type: none;
+
+}
+.sectionB1{
+    float: left;
+    width: 25%;
+    height:100%;
+}
+.sectionB2{
+    float: left;
+    width: 25%;
+    height:100%;
+}
+.sectionB1 div,.sectionB2 div{
+    float: left;
+    height: 25%;
+    width: 100%;
+    padding: 1.5%;
+    text-align: center;
+    list-style-type: none;
+
+}
+.leader-section{
+    font-weight: bold;
+    float: left;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+}
+.leader{
+    width:100%;
+    height:90%;
+}
+.leaderA{
+    text-align: center;
+    margin-left: 5%;
+    margin-top: 5%;
+    width:45%;
+    height:85%;
+    float: left;
+}
+.leaderB{
+    text-align: center;
+    margin-right: 5%;
+    margin-top: 5%;
+    width:45%;
+    height:85%;
+    float: left;
+}
+.leaderA div,.leaderB div{
+    height: 33.3333%;
+    margin: 3%;
+    padding: 1.5%;
+}
+/* style of poda layout*/
+
+/* style of podb layout
+*/
+.podb-layout{
+      height: 88%;
+    margin-left: 15px;
+    font-size-adjust: auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #f8a770;
+    margin-bottom: 20px;
+}
+.b_sectionA{
+    width: 100%;
+    height:23%;
+    text-align: center;
+}
+.b_sectionB{
+    width: 100%;
+    height:69%;
+    text-align: center;
+}
+.b_sectionA div{
+    float: left;
+    width: 25%;
+    height: 100%;
+    padding: 0.5%;
+    text-align: center;
+    list-style-type: none;
+}
+.b_sectionB1{
+    float: left;
+    width: 25%;
+    height:100%;
+}
+.b_sectionB2{
+    float: left;
+    width: 25%;
+    height:100%;
+}
+.b_sectionB1 div,.b_sectionB2 div{
+    float: left;
+    height: 33.3333%;
+    width: 100%;
+    padding: 1.5%;
+    text-align: center;
+    list-style-type: none;
+}
+.b_leader-section{
+    font-weight: bold;
+    float: left;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+}
+.b_leader{
+    width:100%;
+    height:90%;
+}
+
+.b_leaderA{
+    text-align: center;
+    margin-left: 5%;
+    margin-top: 5%;
+    width:45%;
+    height:85%;
+    float: left;
+}
+.b_leaderB{
+    text-align: center;
+    margin-right: 5%;
+    margin-top: 5%;
+    width:45%;
+    height:85%;
+    float: left;
+}
+.b_leaderA div,.b_leaderB div{
+    height: 33.3333%;
+    margin: 3%;
+    padding: 1.5%;
+
+}
+/* style of podb layout
+*/
+
+
+/* style of pod layout
+*/
+.podc-layout{
+    height: 88%;
+    margin-left: 15px;
+    font-size-adjust: auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #98f786;
+    margin-bottom: 20px;
+}
+.c_sectionA{
+    width: 100%;
+    height:23%;
+    text-align: center;
+}
+.c_sectionB{
+    width: 100%;
+    height:69%;
+    text-align: center;
+}
+.c_sectionA div{
+    float: left;
+    width: 25%;
+    height: 100%;
+    padding: 0.5%;
+    text-align: center;
+    list-style-type: none;
+}
+.c_sectionB1{
+    float: left;
+    width: 25%;
+    height:100%;
+}
+.c_sectionB2{
+    float: left;
+    width: 25%;
+    height:100%;
+}
+.c_sectionB1 div,.c_sectionB2 div{
+    float: left;
+    height: 33.3333%;
+    width: 100%;
+    padding: 1.5%;
+    text-align: center;
+    list-style-type: none;  
+}
+.c_leader-section{
+    font-weight: bold;
+    float: left;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+}
+.c_leader{
+    width:100%;
+    height:90%;
+}
+
+.c_leaderA{
+    text-align: center;
+    margin-left: 5%;
+    margin-top: 5%;
+    width:45%;
+    height:85%;
+    float: left;
+}
+.c_leaderB{
+    text-align: center;
+    margin-right: 5%;
+    margin-top: 5%;
+    width:45%;
+    height:85%;
+    float: left;
+}
+.c_leaderA div,.c_leaderB div{
+    height: 33.3333%;
+    margin: 3%;
+    padding: 1.5%;
+}
+
+/* style of drag and drop
+*/
+
+.gu-mirror {
+  position: fixed !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+}
+.gu-hide {
+  display: none !important;
+}
+.gu-unselectable {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+.gu-transit {
+  opacity: 0.2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: alpha(opacity=20);
+}
+
+/* pod section hover */
+.sectionA div:hover, .sectionB1 div:hover,
+.leaderA div:hover, .leaderB div:hover,
+.sectionB2 div:hover,
+.b_sectionA div:hover, .b_sectionB1 div:hover,
+.b_leaderA div:hover, .b_leaderB div:hover,
+.b_sectionB2 div:hover,
+.c_sectionA div:hover, .c_sectionB1 div:hover,
+.c_leaderA div:hover, .c_leaderB div:hover,
+.c_sectionB2 div:hover {
+    border: 1.5px dashed #000;
+}
+
+/* eliminate drag block cover*/
+.gu-mirror{
+    pointer-events: none;
+}
+
+/* change color when staff is assigned to more than 2 bed*/
+.alert-very-danger{
+    background-color: #f79693; 
+}

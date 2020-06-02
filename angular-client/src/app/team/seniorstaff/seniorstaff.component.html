@@ -1,0 +1,78 @@
+<div  class="seniorside">
+    <div class="alert alert-success" *ngIf="saveSuccess">
+      <a class="close" (click)="dismissAlert();">&times;</a>
+      <strong>Success!</strong> Your changes were saved.
+    </div>
+    <div class="senior-section">
+        <div>
+            <p>AC:   </p>
+            <input id="SS1" class="inputText" type='text' name="access_coordinator" [(ngModel)]="alloc?.access_coordinator.staff_name">
+        </div>
+        <div>
+            <p>CNM: </p>
+            <input id="SS2" class="inputText" type='text' name="cnm" [(ngModel)]="alloc?.cnm[0].staff_name">
+            <input id="SS3" class="inputText" type='text' name="cnm" [(ngModel)]="alloc?.cnm[1].staff_name">
+        </div>
+        <div>
+            <p>CNC: </p>
+            <input id="SS4" class="inputText" type='text' name="cnc" [(ngModel)]="alloc?.cnc[0].staff_name">
+            <input id="SS5" class="inputText" type='text' name="cnc" [(ngModel)]="alloc?.cnc[1].staff_name">
+        </div>
+        <div>
+            <p>MERN: </p>
+            <input id="SS6" class="inputText" type='text' name="mern" [(ngModel)]="alloc?.mern.staff_name">
+        </div>
+        <div>
+            <p>Educators: </p>
+            <input id="SS7" class="inputText" type='text' name="educator" [(ngModel)]="alloc?.educator[0].staff_name">
+            <input id="SS8" class="inputText" type='text' name="educator" [(ngModel)]="alloc?.educator[1].staff_name">
+            <input id="SS9" class="inputText" type='text' name="educator" [(ngModel)]="alloc?.educator[2].staff_name">
+            <input id="SS10" class="inputText" type='text' name="educator" [(ngModel)]="alloc?.educator[3].staff_name">
+            <input id="SS11" class="inputText" type='text' name="educator" [(ngModel)]="alloc?.educator[4].staff_name">
+        </div>
+        <div>
+            <p>Resource: </p>
+            <input id="SS12" class="inputText" type='text' name="resource" [(ngModel)]="alloc?.resource[0].staff_name">
+            <input id="SS13" class="inputText" type='text' name="resource" [(ngModel)]="alloc?.resource[1].staff_name">
+            <input id="SS14" class="inputText" type='text' name="resource" [(ngModel)]="alloc?.resource[2].staff_name">
+            <input id="SS15" class="inputText" type='text' name="resource" [(ngModel)]="alloc?.resource[3].staff_name">
+        </div>
+        <div>
+            <p>Tech: </p>
+            <input id="SS16" class="inputText" type='text' name="tech" [(ngModel)]="alloc?.tech.staff_name">
+        </div>
+        <div>
+            <p>CA Support: </p>
+            <input id="SS17" class="inputText" type='text' name="ca_support" [(ngModel)]="alloc?.ca_support.staff_name">
+        </div>
+        <div>
+            <p>Ward Cons.: </p>
+            <input id="SS18" class="inputText" type='text' name="ward_consultant" [(ngModel)]="alloc?.ward_consultant.staff_name">
+        </div>
+        <div>
+            <p>Int. Registrar: </p>
+            <input id="SS19" class="inputText" type='text' name="internal" [(ngModel)]="alloc?.internal[0].staff_name">
+            <input id="SS20" class="inputText" type='text' name="internal" [(ngModel)]="alloc?.internal[1].staff_name">
+        </div>
+        <div>
+            <p>Ext. Registrar: </p>
+            <input id="SS21" class="inputText" type='text' name="external" [(ngModel)]="alloc?.external[0].staff_name">
+            <input id="SS22" class="inputText" type='text' name="external" [(ngModel)]="alloc?.external[1].staff_name">
+        </div>
+        <div>
+            <p>Trans. Registrar.: </p>
+            <input id="SS23" class="inputText" type='text' name="transport" [(ngModel)]="alloc?.transport.staff_name">
+        </div>
+        <div>
+            <p>Donation Coord: </p>
+            <input id="SS24" class="inputText" type='text' name="donation" [(ngModel)]="alloc?.donation.staff_name">
+        </div>
+        <div class="alert alert-success" *ngIf="saveSuccess">
+          <a class="close" (click)="dismissAlert();">&times;</a>
+          <strong>Success!</strong> Your changes were saved.
+        </div>
+    </div>
+</div>
+<div class="save" style="text-align: center; margin-top: 0.5%;">     
+        <button style="width: 30%;" (click)="saveAlloc()">Save</button>
+</div>

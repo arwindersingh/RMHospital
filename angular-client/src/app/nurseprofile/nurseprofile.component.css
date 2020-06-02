@@ -1,0 +1,159 @@
+/*Business Card Css */
+
+.business-card {
+  border: 1px solid #cccccc;
+  background: #f8f8f8;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.profile-img {
+  height: 80px;
+  background: white;
+}
+.job {
+  color: #666666;
+  font-size: 17px;
+}
+.mail {
+  font-size: 16px;
+ }
+
+.user-row {
+    margin-bottom: 14px;
+}
+
+.user-row:last-child {
+    margin-bottom: 0;
+}
+
+.dropdown-user {
+    margin: 13px 0;
+    padding: 5px;
+    height: 100%;
+}
+
+.dropdown-user:hover {
+    cursor: pointer;
+}
+
+.table-user-information > tbody > tr {
+    border-top: 1px solid rgb(221, 221, 221);
+}
+
+.table-user-information > tbody > tr:first-child {
+    border-top: 0;
+}
+
+
+.table-user-information > tbody > tr > td {
+    border-top: 0;
+}
+.toppad{
+  margin-top:20px;
+}
+.modal-body{
+  padding: 0px;
+}
+.panel .panel-info{
+  margin: 0px;
+}
+.mydp{
+  width: 50%;
+}
+#filter{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-style: solid ; 
+  border-width: 1px; 
+  border-color:  #E8E8E8;
+  float: left;
+  width: 100%;
+  padding-top: 3px;
+}
+#date{
+    border-style: solid;
+    height: 36px;
+    width: 40%;
+    padding-left: 12px;
+    padding-right: 0px;
+    padding-top: 9px;
+    margin-top: 5px;
+    border-width: 1px;
+    border-color: #cccccc;
+    border-radius: 5px;
+}
+
+.checkbox {
+    margin-right: 3px;
+    margin-top: 2px;
+    float: left;
+}
+
+.checklist {
+    float: left;
+    margin-right: 25px;
+}
+
+.filterLabel {
+    float:left; 
+    padding-left: 15px; 
+    width: 15%;
+}
+
+.filterContainer {
+    float:left; 
+    width: 85%;
+}
+
+.singleFilter {
+    float: left;
+    width: 100%;
+}
+
+.createPanel {
+    width:100%;
+    float:left;
+    padding-top: 10px;
+}
+
+.createLabel {
+     float:left;
+     width:15%;
+}
+
+.nurse-body .job {
+  height: 45px;
+  word-wrap:break-word; 
+  overflow: hidden;
+ }
+
+.nurse-body .nurse-head {
+    height:35px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 0;
+}
+
+.nurse-body {
+    width: auto;
+    margin-left: 100px;
+}
+
+.media-object{
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.skill-pane {
+  padding: 35px
+}
+
+.textarea {
+    width:80%;
+    height:80px;
+    border: 1px solid #cccccc;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}

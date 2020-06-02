@@ -1,0 +1,90 @@
+﻿{
+    "team": {
+        "beds": {
+            "1": {
+                "staff_member": "Jane",
+
+                "shift_type": "8"
+            },
+            "2": {
+                "staff_member": "Bishal",
+<<<<<<< HEAD
+                "shift_type": "12"
+=======
+                "shift_type": "8"
+
+>>>>>>> 7634a31aa5c1fe1cd1dd25e566dbdd757503829f
+            },
+            "3": {
+                "staff_member": "4",
+                "shift_type": "8"
+            },
+            "4": {
+                "staff_member": "4",
+                "shift_type": "8"
+            },
+            "5": {
+                "staff_member": "5",
+                "shift_type": "8"
+            },
+            "6": {
+                "staff_member": "6",
+                "shift_type": "8"
+            },
+            "7": {
+                "staff_member": "7",
+                "shift_type": "8"
+            },
+            "8": {
+                "staff_member": "8",
+                "shift_type": "8"
+            },
+            "9": {
+                "staff_member": "9",
+                "shift_type": "8"
+            },
+            "10": {
+                "staff_member": "10",
+                "shift_type": "8"
+            },
+            "11": {
+                "staff_member": "11",
+                "shift_type": "8"
+            },
+            "12": {
+                "staff_member": "12",
+                "shift_type": "8"
+            }
+        },
+        "consultant": {
+            "staff_member": null,
+            "shift_type": "8"
+        },
+        "team_leader": {
+            "staff_member": null,
+            "shift_type": "8"
+        },
+        "registrar": {
+            "staff_member": null,
+            "shift_type": "8"
+        },
+        "resident": {
+            "staff_member": null,
+            "shift_type": "8"
+        },
+        "pod_ca": {
+            "staff_member": null,
+            "shift_type": "8"
+        },
+        "ca_cleaner": {
+            "staff_member": null,
+            "shift_type": "8"
+        },
+        "name": "a"
+    },
+    "status": "success"
+}
+<<<<<<< HEAD
+
+=======
+>>>>>>> 7634a31aa5c1fe1cd1dd25e566dbdd757503829f
