@@ -24,7 +24,7 @@
     "mydatepicker": "^2.0.27",
     "ng2-dragula": "^1.5.0",
     "ngx-bootstrap": "^1.9.0",
-    "ngx-papaparse": "^0",
+    "ngx-papaparse": "^6",
     "rxjs": "^5.4.3",
     "zone.js": "^0.8.16"
   },
